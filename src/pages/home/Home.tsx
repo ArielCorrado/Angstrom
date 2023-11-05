@@ -6,7 +6,7 @@ function Home() {
     return (
         <>
             <BgHome/>
-            <div className='seccions flex column'>
+            <div className='seccions seccionToWaitImages flex column'>
                 <Slider/>        
             </div>
         </>

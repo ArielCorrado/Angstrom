@@ -6,7 +6,7 @@ function Slider() {
             <div className="sliderTextsCont flex column"></div>
             <div className="sliderImgsAndTextCont">
                 <img src="/images/blueprints/bp4.png" alt="Angstrom blueprint" className='sliderImg1'/>
-                <img src="/images/home/3.jpg" alt="Angstrom team" className='sliderImg2'/>
+                <img src="/images/home/3b.jpg" alt="Angstrom team" className='sliderImg2'/>
                 <img src="/images/logos/compas.png" alt="Angstrom compas" className="sliderImgCompas"/>
             </div>
             <div className="sliderTextsCont flex column"> 
