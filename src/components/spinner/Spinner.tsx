@@ -8,7 +8,7 @@ import "./spinner.css";
 const Spinner = () => {
     return (
         <div className="contSpinners flex">
-            <PuffLoader color="orange" size={100}/>
+            <PuffLoader color="#beae92" size={100}/>
         </div>
     );
 }

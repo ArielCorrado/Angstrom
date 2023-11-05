@@ -5,8 +5,8 @@ import BgHome from '../../components/bgHome/BgHome';
 function Home() {
     return (
         <>
-            <BgHome/>
             <div className='seccions seccionToWaitImages flex column'>
+                <BgHome/>
                 <Slider/>        
             </div>
         </>
