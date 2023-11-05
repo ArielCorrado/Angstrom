@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');  /* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap'); /* font-family: 'EB Garamond', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');  /* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* font-family: 'Petrona', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap'); /* font-family: 'Zen Old Mincho', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100;200;300;400;500;600;700&display=swap'); /* font-family: 'Arima', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap'); /* font-family: 'Barlow Condensed', serif; */
+
+:root {
+    --color-web-1: #000000;
+    --color-web-2: #313131;
+    --color-web-3: #ffffff;
+    --color-web-4: #88775e;    
+
+    --alto-navbar: 4rem;
+    --color-navbar: var(--color-web-1);
+    --color-navbar-hover: #beae92;
+    
+    --text-dark-color: rgb(68, 68, 68);
+    --text-light-color: var(--color-web-3);
+
+    --vertical-padding-seccions: 2rem;
+    --horizontal-padding-seccions: 1rem;
+    --bg-light-color-seccions: white; 
+
+    --buttons-color: var(--color-web-3);
+
+    --font-size-letras-chicas-landscape: 20px;
+    --font-size-letras-chicas-portrait: 18px;
+    --font-style-principal: 'Poppins', sans-serif;
+
+    --font-size-letras-grandes-landscape: 25px;
+    --font-size-letras-grades-portrait: 22px;
+
+    --border-with-bg-white: rgb(219, 219, 219);
+    --border-with-bg-dark: rgb(34, 34, 34);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.15rem;
+    line-height: 1.2;
+    font-weight: 300;
+    list-style: none;
+    font-size: 0.7rem;
+    font-family: var(--font-style-principal);
+    color: var(--text-light-color);
+    text-align: center;
+    user-select: none;
+}
+
+body {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.opb {
+    object-position: bottom;
+}
+
+.opt {
+    object-position: top;
+}
+
+.opc {
+    object-position: center;
+}
+
+.opr {
+    object-position: right;
+}
+
+.opl {
+    object-position: left;
+}
+
+@media only screen and (orientation: landscape) {
+    html {
+        font-size: calc(1vh + 16px);
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    html {
+        font-size: calc(1vw + 16px);
+    }
+}
+
+

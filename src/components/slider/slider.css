@@ -1,0 +1,121 @@
+.sliderHome {
+    height: calc(100vh - var(--alto-navbar));
+    width: 100%;
+    z-index: 200;
+    padding: 1rem;
+}
+
+.sliderImgsAndTextCont {
+    position: relative;
+    width: 30rem;
+    max-width: 100%;
+    height: 60%;
+}
+
+.sliderImg1 {
+    position: absolute;
+    height: 150%;
+    max-width: 120%;
+    object-fit: contain;
+    filter: invert(90%);
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    margin: auto;
+    z-index: 60;
+}
+
+.sliderImg2 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 50;
+    filter: brightness(65%) contrast(120%);
+}
+
+.sliderTextsCont {
+    height: 60%;
+    width: 10rem;
+    z-index: 100;
+    position: relative;
+}
+
+.sliderTextsCont2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    align-items: flex-end;
+    margin-top: -2rem;
+    justify-content: flex-start;
+}
+
+.sliderText1, .sliderText2 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    z-index: 30;
+    font-weight: 400;
+    z-index: 10;
+}
+
+.sliderText2 {
+    font-size: 2.5rem;
+    align-self: flex-end;
+}
+
+.sliderText3 {
+    font-size: 0.75rem;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 1rem;
+    width: max-content;
+    color: rgb(228, 228, 228);
+    line-height: 1.3;
+    text-align: right;
+    z-index: 10;
+}
+
+.sliderImgCompas {
+    position: absolute;
+    width: 7.5rem;
+    object-fit: contain;
+    filter: opacity(0.2) brightness(50%);
+    left: 100%;
+    bottom: -2rem;
+    transform: translateX(-50%);
+}
+
+.sliderButton {
+    background-color: var(--color-web-4);
+    border: none;
+    padding: 0.85rem 1rem;
+    text-transform: uppercase;
+    z-index: 10;
+    margin-top: 1.25rem;
+    letter-spacing: unset;
+    cursor: pointer;
+}
+
+@media only screen and (orientation: portrait) {
+
+    .sliderText1 {
+        font-size: 3rem;
+    }
+
+    .sliderText2 {
+        font-size: 2.5rem;
+    }
+
+    .sliderTextsCont {
+        width: 10vw;
+    }
+
+    .sliderImgCompas {
+        filter: opacity(0.25);
+    }
+
+    .sliderImg1 {
+        max-width: unset;
+    }
+}

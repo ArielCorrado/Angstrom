@@ -1,0 +1,8 @@
+.seccions {
+    min-height: calc(100vh - var(--alto-navbar));
+    margin-top: var(--alto-navbar);
+    background-color: var(--color-web-1);
+    position: relative;
+    justify-content: flex-start;
+    /* padding: var(--vertical-padding-seccions) var(--horizontal-padding-seccions); */
+}
