@@ -1,10 +1,10 @@
 .sliderHome {
-    height: calc(100vh - var(--alto-navbar));
+    min-height: calc(100vh - var(--alto-navbar));
     width: 100%;
     z-index: 200;
-    padding: 1rem;
+    padding: 3rem 1rem;
     overflow: hidden;
-    --height-content-slider: 70%;
+    --height-content-slider: 25rem;
 }
 
 .sliderImgsAndTextCont {
