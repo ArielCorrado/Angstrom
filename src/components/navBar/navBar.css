@@ -111,7 +111,7 @@
     animation-duration: 0.35s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    border-top: 1px solid rgb(37, 37, 78);
+    /* border-top: 1px solid rgb(37, 37, 78); */
 }
 
 @keyframes menuBaja {
@@ -137,7 +137,7 @@
     animation-duration: 0.35s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    border-top: 1px solid rgb(37, 37, 78);
+    /* border-top: 1px solid rgb(37, 37, 78); */
 }
 
 @keyframes menuSube {
