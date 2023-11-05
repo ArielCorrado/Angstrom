@@ -2,11 +2,12 @@ import { useEffect, useContext } from "react";
 import { Link, useLocation } from 'react-router-dom';
 import "./navBar.css";
 import { SpinnerContext } from "../../context/spinnerContext";
+import { SpinnerContextType } from "../../types/types";
 import waitAllImagesCharged from "../../utils/waitAllImagesCharged";
 
 const NavBar = () => {
     
-    const { showSpinner } = useContext(SpinnerContext);
+    const { showSpinner } = useContext <SpinnerContextType> (SpinnerContext);
     const thisLocation = useLocation();
         
     useEffect(() => {   

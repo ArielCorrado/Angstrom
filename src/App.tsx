@@ -4,10 +4,11 @@ import NavBar from './components/navBar/NavBar';
 import "./styles/generalStyles.css";
 import "./styles/animations.css";
 import { SpinnerContext } from './context/spinnerContext';
+import { SpinnerContextType } from './types/types';
 import { useContext } from 'react';
 
 function App() {
-    const {spinner} = useContext(SpinnerContext);
+    const { spinner } = useContext <SpinnerContextType> (SpinnerContext);
 
     return (
         <BrowserRouter>
