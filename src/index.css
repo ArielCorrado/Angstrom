@@ -32,6 +32,12 @@
     --border-with-bg-dark: rgb(36, 36, 36);
 }
 
+@media only screen and (orientation: portrait) {
+    :root {
+        --border-with-bg-dark: rgb(56, 56, 56);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;

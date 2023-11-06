@@ -134,10 +134,6 @@
         top: 35%;
     }
 
-    .sliderImgCompas {
-        filter: opacity(0.4) brightness(30%);
-    }
-
     .sliderButton {
         font-size: var(--font-size-letras-chicas-portrait);
     }
