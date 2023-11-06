@@ -84,6 +84,10 @@
     .navBarLogo {
         height: 70%;
     }
+
+    .contMenu {
+        border-bottom: 1px solid var(--border-with-bg-dark);
+    }
 }
 
 

@@ -34,7 +34,7 @@
 
 @media only screen and (orientation: portrait) {
     :root {
-        --border-with-bg-dark: rgb(56, 56, 56);
+        --border-with-bg-dark: rgb(65, 65, 65);
     }
 }
 
