@@ -11,7 +11,7 @@
 .bgHomeDiv {
     height: 100%;
     width: calc(100% / 7);
-    border-right: 2px solid var(--border-with-bg-dark);
+    border-right: 1px solid var(--border-with-bg-dark);
     justify-content: space-between;
 }
 
@@ -22,10 +22,31 @@
 
 .bgHomeDiv2a {
     width: calc(100% / 5);
-    border-right: 2px solid var(--border-with-bg-dark);
+    border-right: 1px solid var(--border-with-bg-dark);
     height: 100%;
 }
 
 .bgHomeDiv2aLast {
     border-right: unset;
+}
+
+.bgHomeDiv2Medium {
+    border-right: unset;
+}
+
+@media only screen and (orientation: portrait) {
+
+    .bgHomeDiv {
+        border-right: unset;
+    }
+
+    .bgHomeDiv2aLast {
+        border-right: 1px solid var(--border-with-bg-dark);
+        height: 3.5rem;
+    }
+
+    .bgHomeDiv2Medium {
+        border-right: 1px solid var(--border-with-bg-dark);
+        height: 2rem;
+    }
 }

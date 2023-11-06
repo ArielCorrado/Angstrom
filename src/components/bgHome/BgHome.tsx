@@ -9,14 +9,14 @@ function BgHome() {
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
-                    <div className="bgHomeDiv2a bgHomeDiv2aLast"></div>
+                    <div className="bgHomeDiv2a bgHomeDiv2Medium"></div>
                 </div>
                 <div className="bgHomeDivsCont2 flex">
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
-                    <div className="bgHomeDiv2a bgHomeDiv2aLast"></div>
+                    <div className="bgHomeDiv2a bgHomeDiv2Medium"></div>
                 </div>
             </div>
             <div className="bgHomeDiv flex column">
@@ -41,14 +41,14 @@ function BgHome() {
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
-                    <div className="bgHomeDiv2a bgHomeDiv2aLast"></div>
+                    <div className="bgHomeDiv2a bgHomeDiv2Medium"></div>
                 </div>
                 <div className="bgHomeDivsCont2 flex">
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
-                    <div className="bgHomeDiv2a bgHomeDiv2aLast"></div>
+                    <div className="bgHomeDiv2a bgHomeDiv2Medium"></div>
                 </div>
             </div>
             <div className="bgHomeDiv flex column">
@@ -73,14 +73,14 @@ function BgHome() {
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
-                    <div className="bgHomeDiv2a bgHomeDiv2aLast"></div>
+                    <div className="bgHomeDiv2a bgHomeDiv2Medium"></div>
                 </div>
                 <div className="bgHomeDivsCont2 flex">
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
-                    <div className="bgHomeDiv2a bgHomeDiv2aLast"></div>
+                    <div className="bgHomeDiv2a bgHomeDiv2Medium"></div>
                 </div>
             </div>
             <div className="bgHomeDiv flex column">
@@ -105,14 +105,14 @@ function BgHome() {
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
-                    <div className="bgHomeDiv2a bgHomeDiv2aLast"></div>
+                    <div className="bgHomeDiv2a bgHomeDiv2Medium"></div>
                 </div>
                 <div className="bgHomeDivsCont2 flex">
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
                     <div className="bgHomeDiv2a"></div>
-                    <div className="bgHomeDiv2a bgHomeDiv2aLast"></div>
+                    <div className="bgHomeDiv2a bgHomeDiv2Medium"></div>
                 </div>
             </div>
         </div>
