@@ -25,3 +25,7 @@
     border-right: 1px solid var(--border-with-bg-dark);
     height: 100%;
 }
+
+.bgHomeDiv2aLast {
+    border-right: unset;
+}
