@@ -13,6 +13,7 @@
     width: 30rem;
     max-width: 100%;
     height: var(--height-content-slider);
+    perspective: 1000px;
 }
 
 .sliderImg1 {

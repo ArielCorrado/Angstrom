@@ -23,7 +23,7 @@
 /*********************** Entrada Home ***********************/
 
 .sliderHome {
-    --initial-home-animation-duration: 1s;
+    --initial-home-animation-duration: 1.25s;
 }
 
 .sliderImg1_AnimationOnEnter {
@@ -31,60 +31,42 @@
     animation-duration: var(--initial-home-animation-duration);
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
+    opacity: 0;
 }
 
 @keyframes sliderImg1_AnimationOnEnter {
     0% {
         opacity : 0;
-        transform: scale(50%);
+        transform: scale(50%) rotate3D(0, 1, 1, 45deg);
     }
     100% {
         opacity: 1;
-        transform: scale(100%);
+        transform: scale(100%) rotate3D(0, 1, 1, 0);
     }
 }
 
-/*********/
-
-.sliderImg2_AnimationOnEnter {
-    animation-name: sliderImg2_AnimationOnEnter;
-    animation-duration: var(--initial-home-animation-duration);
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-    opacity: 0;
-}
-
-@keyframes sliderImg2_AnimationOnEnter {
-    0% {
-        opacity : 0;
-        transform: translateX(-20%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 /**********/
 
-.sliderTextsCont2_AnimationOnEnter {
-    animation-name: sliderTextsCont2_AnimationOnEnter;
-    animation-duration: var(--initial-home-animation-duration);
+.sliderTexts_AnimationOnEnter {
+    animation-name: sliderTexts_AnimationOnEnter;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
     opacity: 0;
 }
 
-@keyframes sliderTextsCont2_AnimationOnEnter {
+@keyframes sliderTexts_AnimationOnEnter {
     0% {
         opacity : 0;
-        transform: translateX(20%);
+        transform: translateX(5rem);
     }
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
+
 
 /**********/
 
@@ -180,3 +162,20 @@
 }
 
 
+/**************************************************************/
+
+.animation_duration250 {
+    animation-duration: 2.5s;
+}
+
+.animation_delay025 {
+    animation-delay: 0.35s;
+}
+
+.animation_delay050 {
+    animation-delay: 0.70s;
+}
+
+.animation_delay075 {
+    animation-delay: 1.05s;
+}
