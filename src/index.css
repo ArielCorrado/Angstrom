@@ -24,14 +24,10 @@
     --bg-light-color-seccions: white; 
 
     --buttons-color: var(--color-web-3);
-
-    --font-size-letras-chicas-landscape: 20px;
-    --font-size-letras-chicas-portrait: 18px;
+    
+    --font-size-letras-chicas-portrait: 16px;
     --font-style-principal: 'Poppins', sans-serif;
-
-    --font-size-letras-grandes-landscape: 25px;
-    --font-size-letras-grades-portrait: 22px;
-
+   
     --border-with-bg-white: rgb(219, 219, 219);
     --border-with-bg-dark: rgb(34, 34, 34);
 }
@@ -44,7 +40,7 @@
     line-height: 1.2;
     font-weight: 300;
     list-style: none;
-    font-size: 0.7rem;
+    font-size: 16px;
     font-family: var(--font-style-principal);
     color: var(--text-light-color);
     text-align: center;

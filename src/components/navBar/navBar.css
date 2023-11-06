@@ -111,7 +111,8 @@
     animation-duration: 0.35s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    /* border-top: 1px solid rgb(37, 37, 78); */
+    border-left: 1px dotted var(--border-with-bg-dark);
+    border-bottom: 1px dotted var(--border-with-bg-dark);
 }
 
 @keyframes menuBaja {
@@ -137,7 +138,8 @@
     animation-duration: 0.35s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    /* border-top: 1px solid rgb(37, 37, 78); */
+    border-left: 1px dotted var(--border-with-bg-dark);
+    border-bottom: 1px dotted var(--border-with-bg-dark);
 }
 
 @keyframes menuSube {
