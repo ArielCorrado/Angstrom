@@ -85,10 +85,10 @@
     position: absolute;
     width: 7.5rem;
     object-fit: contain;
-    filter: opacity(0.2) brightness(50%);
+    filter: opacity(0.35);
     left: 100%;
     bottom: -2rem;
-    transform: translateX(-50%);
+    transform: translateX(-49%);
 }
 
 .sliderButton {

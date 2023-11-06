@@ -10,7 +10,7 @@
     --color-web-1: #070707;
     --color-web-2: #313131;
     --color-web-3: #ffffff;
-    --color-web-4: #424242; 
+    --color-web-4: #363742; 
 
     --alto-navbar: 4rem;
     --color-navbar: var(--color-web-1);
@@ -29,12 +29,12 @@
     --font-style-principal: 'Poppins', sans-serif;
    
     --border-with-bg-white: rgb(219, 219, 219);
-    --border-with-bg-dark: rgb(31, 31, 31);
+    --border-with-bg-dark: #202024;
 }
 
 @media only screen and (orientation: portrait) {
     :root {
-        --border-with-bg-dark: rgb(51, 51, 51);
+        --border-with-bg-dark: #2a2a31;
     }
 }
 
