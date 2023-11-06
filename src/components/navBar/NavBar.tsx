@@ -15,10 +15,18 @@ const NavBar = () => {
         const seccionToWaitImages = document.querySelector(".seccionToWaitImages");         //Espera que se carguen todas las imágenes en la pagina actual si esta tiene la clase "seccionToWaitImages"
         if (seccionToWaitImages) {                                                          // luego Deshabilita el spinner    
             const checkImages = async () => {
-               showSpinner(true);
-               await waitAllImagesCharged();
-               showSpinner(false);
-               seccionToWaitImages.classList.add("opacityOnCharge");
+                showSpinner(true);
+                const sliderHome = document.querySelector(".sliderHome");
+                const sliderAimations = sliderHome?.getAnimations({ subtree: true });
+                sliderAimations?.forEach((animation) => {
+                        animation.pause();
+                })
+                await waitAllImagesCharged();
+                showSpinner(false);
+                sliderAimations?.forEach((animation) => {
+                    animation.play();
+                })
+                seccionToWaitImages.classList.add("opacityOnCharge");
             }
             checkImages();
         }        

@@ -1,4 +1,4 @@
-import "./homeCardImg1.css"
+import "./cardImg1.css"
 import {ReactNode, useState, useRef} from "react"
 
 function HomeCardImg1 (props: {imgSrc: string, text: string}) {

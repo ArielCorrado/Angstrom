@@ -9,8 +9,8 @@ function Home() {
             <div className='seccions seccionToWaitImages flex column'>
                 <BgHome/>
                 <Slider/>        
+                <HomePhotos1/>
             </div>
-            <HomePhotos1/>
         </>
     );
 }
