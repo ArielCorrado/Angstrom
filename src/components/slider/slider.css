@@ -2,7 +2,7 @@
     min-height: calc(100vh - var(--alto-navbar));
     width: 100%;
     z-index: 200;
-    padding: 3rem 0.25rem 3rem 0;
+    padding: 3rem 0;
     overflow: hidden;
     position: relative;
     --height-content-slider: 25rem;
@@ -13,7 +13,6 @@
     width: 30rem;
     max-width: 100%;
     height: var(--height-content-slider);
-    perspective: 1000px;
 }
 
 .sliderImg1 {
@@ -21,7 +20,7 @@
     height: 150%;
     max-width: 120%;
     object-fit: contain;
-    filter: invert(100%);
+    filter: invert(100%) opacity(0.75);
     top: -3rem;
     bottom: 0;
     right: 45%;
@@ -121,10 +120,6 @@
     }
 
     .sliderTextsCont {
-        width: 15vw;
-    }
-
-    .sliderTextsContIzq {
         width: 0;
     }
   
@@ -133,6 +128,11 @@
         right: 30%;
         height: 120%;
         top: 35%;
+        filter: invert(100%) opacity(0.95);
+    }
+
+    .sliderImg2 {
+        filter: brightness(55%) contrast(120%);
     }
 
     .sliderButton {
@@ -141,6 +141,7 @@
 
     .sliderTextsCont2 {
         margin-top: -3rem;
+        padding-right: 0.5rem;
     }
 
 }

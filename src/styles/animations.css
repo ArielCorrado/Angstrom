@@ -37,11 +37,11 @@
 @keyframes sliderImg1_AnimationOnEnter {
     0% {
         opacity : 0;
-        transform: scale(50%) rotate3D(0, 1, 1, 45deg);
+        transform: scale(50%);
     }
     100% {
         opacity: 1;
-        transform: scale(100%) rotate3D(0, 1, 1, 0);
+        transform: scale(100%);
     }
 }
 
@@ -50,7 +50,7 @@
 
 .sliderTexts_AnimationOnEnter {
     animation-name: sliderTexts_AnimationOnEnter;
-    animation-duration: 1s;
+    animation-duration: 0.75s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
     opacity: 0;
@@ -75,13 +75,12 @@
     animation-duration: var(--initial-home-animation-duration);
     animation-fill-mode: forwards;
     animation-timing-function: linear;
-    transform-origin: 0;
     opacity: 0;
 }
 
 @keyframes sliderImgCompas_AnimationOnEnter {
     0% {
-        transform: rotateY(180deg) translateX(-49%);
+        transform: rotateY(360deg) translateX(-49%);
         opacity: 0;
     }
     100% {
@@ -177,5 +176,5 @@
 }
 
 .animation_delay075 {
-    animation-delay: 1.05s;
+    animation-delay: 1.0s;
 }

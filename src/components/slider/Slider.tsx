@@ -3,7 +3,7 @@ import "./slider.css";
 function Slider() {
     return (
         <div className="sliderHome flex">
-            <div className="sliderTextsCont sliderTextsContIzq flex column"></div>
+            <div className="sliderTextsCont flex column"></div>
             <div className="sliderImgsCont">
                 <img src="/images/blueprints/bp4.png" alt="Angstrom blueprint" className='sliderImg1 sliderImg1_AnimationOnEnter'/>
                 <img src="/images/home/3b.jpg" alt="Angstrom team" className='sliderImg2 opacityOnCharge animation_duration250'/>
