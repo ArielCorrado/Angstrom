@@ -85,7 +85,7 @@
     position: absolute;
     width: 7.5rem;
     object-fit: contain;
-    filter: opacity(0.35);
+    filter: opacity(0.25);
     left: 100%;
     bottom: -2rem;
     transform: translateX(-49%);
