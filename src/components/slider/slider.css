@@ -33,6 +33,7 @@
     object-fit: cover;
     z-index: 50;
     filter: brightness(65%) contrast(120%);
+    border-radius: 0.1rem;
 }
 
 .sliderTextsCont {
@@ -97,6 +98,7 @@
     margin-top: 1.25rem;
     letter-spacing: unset;
     cursor: pointer;
+    border-radius: 0.1rem;
 }
 
 @media only screen and (orientation: portrait) {

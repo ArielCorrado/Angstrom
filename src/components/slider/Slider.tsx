@@ -14,7 +14,7 @@ function Slider() {
                     <p className="sliderText1">Angstrom</p>
                     <p className="sliderText2">Técnica</p>
                     <p className="sliderText3">Somos una consultora de <br />documentacion técnica <br />de la industria de la <br />construcción</p>
-                    <button className="sliderButton">Conocer más</button>
+                    <button className="sliderButton flex">Conocer más</button>
                 </div>
             </div>
         </div>

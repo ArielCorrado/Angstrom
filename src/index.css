@@ -7,14 +7,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap'); /* font-family: 'Barlow Condensed', serif; */
 
 :root {
-    --color-web-1: #000000;
+    --color-web-1: #0c0c0c;
     --color-web-2: #313131;
     --color-web-3: #ffffff;
-    --color-web-4: #88775e;    
+    --color-web-4: #424242; 
 
     --alto-navbar: 4rem;
     --color-navbar: var(--color-web-1);
-    --color-navbar-hover: #beae92;
+    --color-navbar-hover: white;
     
     --text-dark-color: rgb(68, 68, 68);
     --text-light-color: var(--color-web-3);

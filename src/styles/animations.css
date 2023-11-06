@@ -17,3 +17,76 @@
         opacity: 1;
     }
 }
+
+
+/*************************************************/
+
+.brightnessOff {
+    animation-name: brightnessOff;
+    animation-duration: 0.35s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes brightnessOff {
+    0% {
+        filter: brightness(100%);
+    }
+    100% {
+        filter: brightness(20%);
+    }
+}
+
+.brightnessOn {
+    animation-name: brightnessOn;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes brightnessOn {
+    0% {
+        filter: brightness(20%);
+    }
+    100% {
+        filter: brightness(100%);
+    }
+}
+
+.textFadeInVertical {
+    animation-name: textFadeInVertical;
+    animation-duration: 0.35s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes textFadeInVertical {
+    0% {
+        transform: translateY(1rem);
+        filter: opacity(0);
+    }
+    100% {
+        transform: translateY(0);
+        filter: opacity(1);
+    }
+}
+
+.textFadeOutVertical {
+    animation-name: textFadeOutVertical;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes textFadeOutVertical {
+    0% {
+        transform: translateY(0);
+        filter: opacity(1);
+    }
+    100% {
+        transform: translateY(1rem);
+        filter: opacity(0);
+    }
+}
+
+
