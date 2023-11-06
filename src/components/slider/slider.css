@@ -144,4 +144,8 @@
         padding-right: 0.5rem;
     }
 
+    .sliderImgCompas {
+        filter: opacity(0.45);
+    }
+
 }
