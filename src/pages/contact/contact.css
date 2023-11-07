@@ -1,3 +1,7 @@
+.contactSeccion {
+    padding: 0 var(--horizontal-padding-seccions) 2.5rem var(--horizontal-padding-seccions);
+}
+
 .contFormContacto {
     width: 100%;
     height: fit-content;
@@ -19,6 +23,13 @@
     font-weight: 400;
 }
 
+.telEmailCont {
+    margin-top: 3rem;
+    width: var(--ancho-form);
+    justify-content: center;
+    max-width: 100%;
+}
+
 .tel-contacto, .email-contacto {
     justify-content: flex-start;
 }
@@ -28,6 +39,11 @@
     font-size: 1rem;
     font-weight: 400;
     opacity: 1;
+    margin-right: 2rem;
+}
+
+.email-contacto h2 {
+    margin: 0;
 }
 
 .tel-contacto {
@@ -48,8 +64,7 @@
 .form {
     --grid-gap: 0.75rem;
     display: grid;
-    grid-template-areas: "contacto_tel contacto_email"
-                         "titulo titulo" 
+    grid-template-areas: "titulo titulo" 
                          "nombre telefono"
                          "email empresa"
                          "mensaje mensaje";
@@ -144,17 +159,23 @@
     }
 
     .tel-contacto, .email-contacto {
-        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .tel-contacto h2, .email-contacto h2 {
+        margin-right: 0;
     }
 
     .titulo-contacto {
         margin-top: 4rem;
     }
 
+    .telEmailCont {
+        justify-content: center;
+    }
+
     .form {
-        grid-template-areas: "contacto_tel contacto_tel"
-                             "contacto_email contacto_email"
-                             "titulo titulo" 
+        grid-template-areas: "titulo titulo" 
                              "nombre telefono"
                              "email empresa"
                              "mensaje mensaje";
