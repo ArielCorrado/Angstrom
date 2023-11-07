@@ -23,13 +23,13 @@ const Contact = () => {
                     <div className="telEmailCont flex wrap">
                         <div className='tel-contacto flex'>
                             <a href="https://wa.me/+5491150961206" target='_blank' rel="noreferrer" className='flex'>
-                                <img src="/images/icons/ws.png" alt="phone" className='imgContactoPhone' />
+                                <img src="/images/icons/ws2.png" alt="phone" className='imgContactoPhone' />
                                 <h2>+54 9 11 50961206</h2>
                             </a>
                         </div>
                         <div className='email-contacto flex'>
                             <a href="mailto:info@biweb.com.ar" className='flex'>
-                                <img src="/images/icons/email.png" alt="email" className='imgContactoEmail' />
+                                <img src="/images/icons/email2.png" alt="email" className='imgContactoEmail' />
                                 <h2>info@angstrom.com.ar</h2>
                             </a>
                         </div>

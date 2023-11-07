@@ -8,9 +8,9 @@
 
 :root {
     --color-web-1: rgb(10, 10, 19);
-    --color-web-2: #313131;
+    --color-web-2: #4d5f79;
     --color-web-3: #ffffff;
-    --color-web-4: #363742; 
+    --color-web-4: #1c2b41; 
 
     --alto-navbar: 4rem;
     --color-navbar: var(--color-web-1);
@@ -24,6 +24,8 @@
     --bg-light-color-seccions: white; 
 
     --buttons-color: var(--color-web-3);
+    --buttons-bg: var(--color-web-4);
+    --buttons-hover-bg: #22344e;
     
     --font-size-letras-mayusculas-portrait: 16px;
     --font-size-letras-minusculas-portrait: 19px;

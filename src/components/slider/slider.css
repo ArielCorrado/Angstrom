@@ -92,7 +92,7 @@
 
 .sliderButton {
     font-size: 0.65rem;
-    background-color: var(--color-web-4);
+    background-color: var(--buttons-bg);
     border: none;
     padding: 0.85rem 1rem;
     text-transform: uppercase;
@@ -102,7 +102,11 @@
     cursor: pointer;
     border-radius: 0.1rem;
     font-weight: 400;
-    min-width: 8rem;
+    min-width: 9rem;
+}
+
+.sliderButton:hover {
+    background-color: var(--buttons-hover-bg);
 }
 
 @media only screen and (orientation: portrait) {
