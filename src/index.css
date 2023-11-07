@@ -19,13 +19,14 @@
     --text-dark-color: rgb(68, 68, 68);
     --text-light-color: var(--color-web-3);
 
-    --vertical-padding-seccions: 2rem;
+    --vertical-padding-seccions: 4rem;
     --horizontal-padding-seccions: 1rem;
     --bg-light-color-seccions: white; 
 
     --buttons-color: var(--color-web-3);
     
-    --font-size-letras-chicas-portrait: 16px;
+    --font-size-letras-mayusculas-portrait: 16px;
+    --font-size-letras-minusculas-portrait: 19px;
     --font-style-principal: 'Poppins', sans-serif;
    
     --border-with-bg-white: rgb(219, 219, 219);
@@ -55,7 +56,7 @@
 
 body {
     position: relative;
-    background-color: #000000;
+    background-color: var(--color-web-1);
 }
 
 a {
@@ -95,6 +96,11 @@ a {
 
 .opl {
     object-position: left;
+}
+
+.cursiva {
+    font-style: italic;
+    font-family: 'EB Garamond', serif;
 }
 
 @media only screen and (orientation: landscape) {

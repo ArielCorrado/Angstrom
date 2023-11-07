@@ -3,8 +3,7 @@
     left: 0;
     top: 0;
     width: 100%;
-    height: calc(100vh - var(--alto-navbar));
-    z-index: -1;
+    height: 100%;
     border-bottom: 1px dashed var(--border-with-bg-dark);
 }
 
@@ -25,12 +24,23 @@
     height: 100%;
 }
 
-.bgHomeDiv2aLast {
-    border-right: 1px solid var(--border-with-bg-dark);
-    height: 6rem;
-}
-
 .bgHomeDiv2Medium {
     border-right: 1px solid var(--border-with-bg-dark);
-    height: 4rem;
+    height: 3rem;
+    align-self: flex-end;
 }
+
+.bgHomeDiv2MediumTop {
+    align-self: flex-start;
+}
+
+.bgHomeDiv2aLast {
+    border-right: 1px solid var(--border-with-bg-dark);
+    height: 5rem;
+    align-self: flex-end;
+}
+
+.bgHomeDiv2aLastTop {
+    align-self: flex-start
+}
+

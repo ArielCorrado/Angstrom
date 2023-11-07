@@ -159,7 +159,7 @@ const NavBar = () => {
             <div className="menu flex">
                 <Link className="opcion flex" to="/">Home</Link>
                 <Link className="opcion flex" to="/">Portfolio</Link>
-                <Link className="opcion flex" to="/">Equipo</Link>
+                <Link className="opcion flex" to="/team">Equipo</Link>
                 <Link className="opcion flex" to="/">Nosotros</Link>
                 <Link className="opcion flex" to="/">Contacto</Link>
             </div>

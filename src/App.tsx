@@ -6,6 +6,7 @@ import "./styles/animations.css";
 import { SpinnerContext } from './context/spinnerContext';
 import { SpinnerContextType } from './types/types';
 import { useContext } from 'react';
+import Team from './pages/team/Team';
 
 function App() {
     const { spinner } = useContext <SpinnerContextType> (SpinnerContext);
@@ -15,7 +16,8 @@ function App() {
             {spinner}
             <NavBar/>
             <Routes>
-                <Route path="/" element={<Home/>}/>     
+                <Route path="/" element={<Home/>}/> 
+                <Route path="/team" element={<Team/>}/>     
                 <Route path="*" element={<Home/>}/>            
             </Routes>
         </BrowserRouter>

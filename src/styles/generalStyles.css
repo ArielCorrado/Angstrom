@@ -3,6 +3,14 @@
     margin-top: var(--alto-navbar);
     background-color: var(--color-web-1);
     position: relative;
-    justify-content: flex-start;
-    /* padding: var(--vertical-padding-seccions) var(--horizontal-padding-seccions); */
+    z-index: 10;
+}
+
+.seccionsWithPadding {
+    padding: var(--vertical-padding-seccions) var(--horizontal-padding-seccions);
+}
+
+.titles {
+    font-size: 2.5rem;
+    text-transform: uppercase;
 }
