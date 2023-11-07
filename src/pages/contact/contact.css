@@ -46,19 +46,21 @@
 }
 
 .form {
+    --grid-gap: 0.75rem;
     display: grid;
     grid-template-areas: "contacto_tel contacto_email"
                          "titulo titulo" 
                          "nombre telefono"
                          "email empresa"
                          "mensaje mensaje";
-    grid-gap: 0.75rem;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: calc(50% - var(--grid-gap) / 2) calc(50% - var(--grid-gap) / 2);
     width: var(--ancho-form);
     max-width: 90vw;
 }
 
 .form input, .form textarea {
-    padding: 0.5rem;
+    padding: 0.75rem 0.5rem;
     background-color: rgb(240, 240, 240);
     border: none;
     color: var(--color-web-2);
