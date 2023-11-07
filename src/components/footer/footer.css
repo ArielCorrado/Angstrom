@@ -1,0 +1,16 @@
+.footerBottomCont {
+    background-color: var(--color-navbar);
+    height: var(--alto-navbar);
+    width: 100%;
+    padding: 0 var(--horizontal-padding-seccions);
+}
+
+.footerCopy {
+    font-size: 14px;
+}
+
+@media only screen and (orientation: portrait) {
+    .footerCopy {
+        font-size: 12px;
+    }
+}

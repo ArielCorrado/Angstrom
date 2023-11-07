@@ -34,7 +34,7 @@ const NavBar = () => {
         /******************************** NavBar dinamic colorizer per route **************************/
 
         const navBarNamesRef = [
-            ["/front/home", "home"], ["/front/ingredients", "ingredientes"], ["/front/fragrances", "fragancias"], ["/front/quiz", "quiz"]   //Posicion 0: texto que tiene que tener la ruta, posicion 1: texto que tiene que tener la opcion del navbar
+            ["/home", "home"], ["/team", "equipo"], ["/contact", "contacto"]  //Posicion 0: texto que tiene que tener la ruta, posicion 1: texto que tiene que tener la opcion del navbar
         ]    
 
         const actualOptionsArray = navBarNamesRef.find((el) => thisLocation.pathname.includes(el[0]));
@@ -152,16 +152,16 @@ const NavBar = () => {
     return (
         <div className="contMenu flex opacityOnCharge">
             <div className="navBarContLogoEidioma flex">
-                <Link to="/front/home" className="navBarContLogo flex"><img src="/images/logos/logoColor.png" alt="Logo Tropicalia" className="navBarLogo" /></Link>
+                <Link to="/home" className="navBarContLogo flex"><img src="/images/logos/logoColor.png" alt="Logo Tropicalia" className="navBarLogo" /></Link>
             </div>
             <img className="iconoMenu" src="/images/icons/menu.png" alt="Icono Menu"/>
             <div className="tapaMenu"></div>
             <div className="menu flex">
-                <Link className="opcion flex" to="/">Home</Link>
-                <Link className="opcion flex" to="/">Portfolio</Link>
+                <Link className="opcion flex" to="/home">Home</Link>
+                <Link className="opcion flex" to="/home">Portfolio</Link>
                 <Link className="opcion flex" to="/team">Equipo</Link>
-                <Link className="opcion flex" to="/">Nosotros</Link>
-                <Link className="opcion flex" to="/">Contacto</Link>
+                <Link className="opcion flex" to="/home">Nosotros</Link>
+                <Link className="opcion flex" to="/contact">Contacto</Link>
             </div>
         </div>
     )  

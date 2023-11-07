@@ -1,0 +1,161 @@
+.contFormContacto {
+    width: 100%;
+    height: fit-content;
+    z-index: 100;
+    --ancho-form: 35rem;
+}
+
+.contTituloContacto {
+    grid-area: titulo;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.tituloContacto {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+    font-weight: 400;
+}
+
+.tel-contacto, .email-contacto {
+    justify-content: flex-start;
+}
+
+.tel-contacto h2, .email-contacto h2{
+    color: var(--text-light-color);
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 1;
+}
+
+.tel-contacto {
+    grid-area: contacto_tel;
+}
+
+.imgContactoPhone, .imgContactoEmail {
+    height: 1.35rem;
+    margin-right: 0.5rem;
+    filter: invert(100%);
+    opacity: 0.50;
+}
+
+.email-contacto {
+    grid-area: contacto_email;
+}
+
+.form {
+    display: grid;
+    grid-template-areas: "contacto_tel contacto_email"
+                         "titulo titulo" 
+                         "nombre telefono"
+                         "email empresa"
+                         "mensaje mensaje";
+    grid-gap: 0.75rem;
+    width: var(--ancho-form);
+    max-width: 90vw;
+}
+
+.form input, .form textarea {
+    padding: 0.5rem;
+    background-color: rgb(240, 240, 240);
+    border: none;
+    color: var(--color-web-2);
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: normal;
+}
+
+.form input::placeholder, .form textarea::placeholder {
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    opacity: 0.75;
+    text-align: left;
+    background-color: rgb(240, 240, 240);
+}
+
+.form input:focus, .form textarea:focus {
+    outline: 3px solid gray;
+}
+
+.form textarea {
+    resize: none;
+}
+
+.formNom {
+    grid-area: nombre;
+    min-height: 2rem;
+    width: 100%;
+}
+
+.formTel {
+    grid-area: telefono;
+    min-height: 2rem;
+    width: 100%;
+}
+
+.formEmail {
+    grid-area: email;
+    min-height: 2rem;
+    width: 100%;
+}
+
+.formEmpresa {
+    grid-area: empresa;
+    min-height: 2rem;
+    width: 100%;
+}
+
+.formMsj {
+    grid-area: mensaje;
+    height: 15rem;
+    width: 100%;
+}
+
+.contBotonContacto {
+    width: var(--ancho-form);
+    max-width: 90vw;
+}
+
+.boton-contacto {
+    margin-top: 2rem;
+}
+
+@media only screen and (orientation:portrait) {
+
+    .form input::placeholder, .form textarea::placeholder {
+        font-size: 14px;
+    }
+
+    .divContacto { 
+        width: 50%;
+        clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    }    
+
+    .imgDivContacto {
+        object-position: left top;
+    }
+
+    .seccion-contacto {
+        justify-content: center;
+    }
+
+    .tel-contacto, .email-contacto {
+        justify-content: center;
+    }
+
+    .titulo-contacto {
+        margin-top: 4rem;
+    }
+
+    .form {
+        grid-template-areas: "contacto_tel contacto_tel"
+                             "contacto_email contacto_email"
+                             "titulo titulo" 
+                             "nombre telefono"
+                             "email empresa"
+                             "mensaje mensaje";
+    }
+
+}    

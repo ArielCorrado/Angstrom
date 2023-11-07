@@ -75,6 +75,10 @@
     z-index: 270;
 }
 
+.navBarOptionColorOn {
+    color: var(--color-navbar-hover)
+}
+
 @media only screen and (orientation: portrait) {
 
     .navBarContLogoEidioma {

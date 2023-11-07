@@ -7,6 +7,8 @@ import { SpinnerContext } from './context/spinnerContext';
 import { SpinnerContextType } from './types/types';
 import { useContext } from 'react';
 import Team from './pages/team/Team';
+import { Navigate } from 'react-router-dom';
+import Contact from './pages/contact/Contact';
 
 function App() {
     const { spinner } = useContext <SpinnerContextType> (SpinnerContext);
@@ -16,9 +18,10 @@ function App() {
             {spinner}
             <NavBar/>
             <Routes>
-                <Route path="/" element={<Home/>}/> 
+                <Route path="/home" element={<Home/>}/> 
                 <Route path="/team" element={<Team/>}/>     
-                <Route path="*" element={<Home/>}/>            
+                <Route path="/contact" element={<Contact/>}/>     
+                <Route path="*" element={<Navigate to="/home"/>}/>            
             </Routes>
         </BrowserRouter>
     );

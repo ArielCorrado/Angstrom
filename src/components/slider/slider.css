@@ -102,6 +102,7 @@
     cursor: pointer;
     border-radius: 0.1rem;
     font-weight: 400;
+    min-width: 8rem;
 }
 
 @media only screen and (orientation: portrait) {
