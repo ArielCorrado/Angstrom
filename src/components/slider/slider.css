@@ -33,7 +33,7 @@
     width: 100%;
     object-fit: cover;
     z-index: 50;
-    filter: brightness(65%) contrast(120%);
+    filter: brightness(85%) contrast(100%);
     border-radius: 0.1rem;
 }
 
