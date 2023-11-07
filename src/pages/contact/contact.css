@@ -120,7 +120,7 @@
 
 .formMsj {
     grid-area: mensaje;
-    height: 15rem;
+    height: 12.5rem;
     width: 100%;
 }
 
@@ -169,6 +169,7 @@
     }
 
     .form {
+        --grid-gap: 0.5rem;
         grid-template-areas: "titulo titulo" 
                              "nombre telefono"
                              "email empresa"
