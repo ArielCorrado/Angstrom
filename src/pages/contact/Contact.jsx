@@ -6,12 +6,12 @@ const Contact = () => {
     
     return (
         <>
-            <div className='seccions contactSeccion seccionToWaitImages flex'>
+            <div className='seccions seccionsWithPadding seccionToWaitImages flex'>
                 <BgHome />
                 <div className='contFormContacto flex column'>
                     <form action="" className='form'>
                         <div className='contTituloContacto flex'>
-                            <h2 className='tituloContacto fadeInTitles1'>ENVIANOS TU CONSULTA</h2>
+                            <h2 className='titles tituloContacto fadeInTitles1'>ENVIANOS TU CONSULTA</h2>
                         </div>
                         <input type="text" name="nombre" className='formNom OoS inputForm' placeholder='NOMBRE' />
                         <input type="tel" name="telefono" className='formTel OoS inputForm' placeholder='TELÉFONO' />
