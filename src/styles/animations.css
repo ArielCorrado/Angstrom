@@ -33,7 +33,7 @@
 @keyframes fadeInTitles1 {
     0% {
         opacity: 0;
-        transform: translateY(2rem);
+        transform: translateY(1.5rem);
     }
     100% {
         opacity: 1;
@@ -91,35 +91,35 @@
 
 /*********************** Home Photos 1 ***********************/
 
-.brightnessOff {
-    animation-name: brightnessOff;
+.cardTeamOpacityOn {
+    animation-name: cardTeamOpacityOn;
     animation-duration: 0.35s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
 }
 
-@keyframes brightnessOff {
+@keyframes cardTeamOpacityOn {
     0% {
-        filter: brightness(100%);
+        opacity: 0;
     }
     100% {
-        filter: brightness(20%);
+        opacity: 0.75;
     }
 }
 
-.brightnessOn {
-    animation-name: brightnessOn;
+.cardTeamOpacityOff {
+    animation-name: cardTeamOpacityOff;
     animation-duration: 0.25s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
 }
 
-@keyframes brightnessOn {
+@keyframes cardTeamOpacityOff {
     0% {
-        filter: brightness(20%);
+        opacity: 0.75;
     }
     100% {
-        filter: brightness(100%);
+        opacity: 0;
     }
 }
 

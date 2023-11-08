@@ -4,25 +4,26 @@ import {ReactNode, useState, useRef} from "react"
 function CardTeam (props: {imgSrc: string, name: string, position: string}) {
 
     const [cardText, setCardText] = useState <ReactNode | null> (null);
-    const imgRef = useRef <HTMLImageElement | null> (null);
+    const filterRef = useRef <HTMLImageElement | null> (null);
 
     const showText = () => {
         setCardText(<p className="homeCardImg1Text textFadeInVertical flex">Ver Curriculum</p>)
-        imgRef.current?.classList.remove("brightnessOn");
-        imgRef.current?.classList.remove("brightnessOff");
-        imgRef.current?.classList.add("brightnessOff");
+        filterRef.current?.classList.remove("cardTeamOpacityOff");
+        filterRef.current?.classList.remove("cardTeamOpacityOn");
+        filterRef.current?.classList.add("cardTeamOpacityOn");
     }
 
     const clearText = () => {
         setCardText(<p className="homeCardImg1Text textFadeOutVertical flex">Ver Curriculum</p>)
-        imgRef.current?.classList.remove("brightnessOn");
-        imgRef.current?.classList.remove("brightnessOff");
-        imgRef.current?.classList.add("brightnessOn");
+        filterRef.current?.classList.remove("cardTeamOpacityOff");
+        filterRef.current?.classList.remove("cardTeamOpacityOn");
+        filterRef.current?.classList.add("cardTeamOpacityOff");
     }
 
     return (
         <div className="homeCardImg1Cont cardTeamCont flex" onMouseOver={showText} onMouseLeave={clearText}>
-            <img src={props.imgSrc} alt="Angstrom card" className="homeCardImg1Img" ref={imgRef}/>
+            <img src={props.imgSrc} alt="Angstrom card" className="homeCardImg1Img"/>
+            <div className="cardTeamFilter" ref={filterRef}></div>
             <div className="cardTeamNameCont flex column">
                 <p className="cardTeamName">{props.name}</p>
                 <p className="cardTeamPosition cursiva">{props.position}</p>
