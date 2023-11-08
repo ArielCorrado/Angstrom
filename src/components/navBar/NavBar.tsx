@@ -16,17 +16,16 @@ const NavBar = () => {
         if (seccionToWaitImages) {                                                          // luego Deshabilita el spinner    
             const checkImages = async () => {
                 showSpinner(true);
-                const sliderHome = document.querySelector(".sliderHome");
-                const sliderAimations = sliderHome?.getAnimations({ subtree: true });
-                sliderAimations?.forEach((animation) => {
+                const animations = seccionToWaitImages.getAnimations({ subtree: true });
+                animations.forEach((animation) => {
                         animation.pause();
                 })
                 await waitAllImagesCharged();
                 showSpinner(false);
-                sliderAimations?.forEach((animation) => {
+                seccionToWaitImages.classList.add("opacityOnCharge");
+                animations.forEach((animation) => {
                     animation.play();
                 })
-                seccionToWaitImages.classList.add("opacityOnCharge");
             }
             checkImages();
         }        
