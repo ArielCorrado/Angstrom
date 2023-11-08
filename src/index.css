@@ -34,7 +34,7 @@
     --font-style-principal: 'Poppins', sans-serif;
    
     --border-with-bg-white: rgb(219, 219, 219);
-    --border-with-bg-dark: #2e3742;
+    --border-with-bg-dark: #272f3a;
 }
 
 @media only screen and (orientation: portrait) {
