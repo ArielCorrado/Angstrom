@@ -5,7 +5,7 @@ import BgImage from "../bgImage/BgImage";
 function Slider() {
     return (
         <>
-            <BgImage imgSrc="/images/backgrounds/bg3.jpg" classImage="" classFilter="bgImageFilterOpacityTeam"/>
+            <BgImage imgSrc="/images/backgrounds/bg3.jpg" classImage="bgImageClassTeam" classFilter="bgImageFilterOpacityTeam"/>
             <div className="sliderHome flex">
                 <BgHome/>
                 <div className="sliderTextsCont flex column"></div>
