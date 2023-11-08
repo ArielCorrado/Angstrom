@@ -1,11 +1,12 @@
 import "./team.css";
-import BgHome from "../../components/bgHome/BgHome";
+import BgHome from "../../components/bgRule/BgRule";
 import CardTeam from "../../cards/cardTeam/CardTeam";
-import Footer from "../../components/footer/Footer";
+import BgImage from "../../components/bgImage/BgImage";
 
 function Team() {
     return (
-        <>
+        <>  
+            <BgImage imgSrc="/images/backgrounds/bg3.jpg" classImage="" classFilter="bgImageFilterOpacityTeam"/>
             <div className="seccions seccionsWithPadding seccionToWaitImages column flex">
                 <h1 className="titles fadeInTitles1">Nuestro Equipo</h1>
                 <div className="teamSeccionCardsCont flex wrap">
@@ -14,7 +15,6 @@ function Team() {
                 </div>
                 <BgHome/>
             </div>
-            <Footer/>
         </>
     )
 }

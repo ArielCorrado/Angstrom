@@ -61,6 +61,10 @@
     z-index: 10;
 }
 
+.sliderText1 {
+    color: var(--color-web-6);
+}
+
 .sliderText2 {
     text-transform: uppercase;
     font-size: 2.5rem;
@@ -74,7 +78,6 @@
     font-weight: 600;
     margin-top: 1rem;
     width: max-content;
-    color: rgb(212, 212, 212);
     line-height: 1.4;
     text-align: right;
     z-index: 10;
@@ -84,7 +87,7 @@
     position: absolute;
     width: 7.5rem;
     object-fit: contain;
-    filter: opacity(0.10);
+    filter: opacity(0.05);
     left: 100%;
     bottom: -2rem;
     transform: translateX(-49%);

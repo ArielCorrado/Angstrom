@@ -7,32 +7,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap'); /* font-family: 'Barlow Condensed', serif; */
 
 :root {
-    --color-web-1: rgb(10, 10, 19);
-    --color-web-2: #4a5469;
-    --color-web-3: #ffffff;
-    --color-web-4: #252c3a; 
+    --color-web-1: #0d1321;
+    --color-web-2: #1D2D44;
+    --color-web-3: #3E5C76; 
+    --color-web-4: #748CAB;
+    --color-web-5: #ffffff;
+    --color-web-6: #F0EBD8;
 
     --alto-navbar: 4rem;
     --color-navbar: var(--color-web-1);
-    --color-navbar-hover: white;
+    --color-navbar-hover: var(--color-web-6);
         
     --text-dark-color: rgb(68, 68, 68);
-    --text-light-color: var(--color-web-3);
+    --text-light-color: var(--color-web-5);
 
     --vertical-padding-seccions: 3rem;
     --horizontal-padding-seccions: 1rem;
     --bg-light-color-seccions: white; 
 
-    --buttons-color: var(--color-web-3);
-    --buttons-bg: var(--color-web-4);
-    --buttons-hover-bg: #343b4b;
+    --buttons-color: var(--text-light-color);
+    --buttons-bg: var(--color-web-3);
+    --buttons-hover-bg: #52708a;
     
     --font-size-letras-mayusculas-portrait: 16px;
     --font-size-letras-minusculas-portrait: 19px;
     --font-style-principal: 'Poppins', sans-serif;
    
     --border-with-bg-white: rgb(219, 219, 219);
-    --border-with-bg-dark: #202024;
+    --border-with-bg-dark: #2e3742;
 }
 
 @media only screen and (orientation: portrait) {

@@ -3,6 +3,9 @@
     height: var(--alto-navbar);
     width: 100%;
     padding: 0 var(--horizontal-padding-seccions);
+    z-index: 50;
+    border-top: 1px dashed var(--border-with-bg-dark);
+    position: relative;     /*Para que surta efecto el z-index*/
 }
 
 .footerCopy {
