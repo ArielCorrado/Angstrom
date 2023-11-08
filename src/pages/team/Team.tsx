@@ -5,9 +5,9 @@ import BgImage from "../../components/bgImage/BgImage";
 
 function Team() {
     return (
-        <>  
+        <div className="seccionToWaitImages">  
             <BgImage imgSrc="/images/backgrounds/bg3.jpg" classImage="bgImageClassTeam" classFilter="bgImageFilterOpacityTeam"/>
-            <div className="seccions seccionsWithPadding seccionToWaitImages column flex">
+            <div className="seccions seccionsWithPadding column flex">
                 <h1 className="titles">Nuestro Equipo</h1>
                 <div className="teamSeccionCardsCont flex wrap">
                     <CardTeam imgSrc="/images/team/diego.jpg" name="Diego Corrado" position="Dibujante"/>
@@ -15,7 +15,7 @@ function Team() {
                 </div>
                 <BgHome/>
             </div>
-        </>
+        </div>
     )
 }
 
