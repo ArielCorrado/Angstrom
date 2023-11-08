@@ -11,7 +11,7 @@ const Contact = () => {
                     <div className='tel-contacto flex'>
                         <a href="https://wa.me/+5491150961206" target='_blank' rel="noreferrer" className='flex'>
                             <img src="/images/icons/ws2.png" alt="phone" className='imgContactoPhone' />
-                            <h2>+54 9 11 50961206</h2>
+                            <h2>+549 11 50961206</h2>
                         </a>
                     </div>
                     <div className='email-contacto flex'>
