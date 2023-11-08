@@ -29,6 +29,10 @@
     opacity: 0.95;
 }
 
+.bgImageClassTeam {
+    object-position: bottom;
+}
+
 .bgImageClassContact {
     filter: brightness(25%) contrast(100%); 
     object-position: left;

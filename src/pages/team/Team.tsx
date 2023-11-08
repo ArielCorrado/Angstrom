@@ -6,7 +6,7 @@ import BgImage from "../../components/bgImage/BgImage";
 function Team() {
     return (
         <>  
-            <BgImage imgSrc="/images/backgrounds/bg3.jpg" classImage="" classFilter="bgImageFilterOpacityTeam"/>
+            <BgImage imgSrc="/images/backgrounds/bg3.jpg" classImage="bgImageClassTeam" classFilter="bgImageFilterOpacityTeam"/>
             <div className="seccions seccionsWithPadding seccionToWaitImages column flex">
                 <h1 className="titles fadeInTitles1">Nuestro Equipo</h1>
                 <div className="teamSeccionCardsCont flex wrap">
