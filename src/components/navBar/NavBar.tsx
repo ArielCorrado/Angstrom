@@ -12,6 +12,44 @@ const NavBar = () => {
         
     useEffect(() => {   
 
+        /****************************************** OoS ************************************************/
+
+        const OoS = () => {
+            const OoSElements: NodeListOf<HTMLElement> = document.querySelectorAll(".OoS");
+            const OoSElementsWf: NodeListOf<HTMLElement> = document.querySelectorAll(".OoSwF");
+            OoSElements.forEach((element) => {          //Mostramos el elemento cuando aparece su primer mitad
+                if(((element.getBoundingClientRect().top ) <= (window.innerHeight  - (element.offsetHeight / 2)))) element.classList.add("OoSS");   
+            })
+            OoSElementsWf.forEach((element) => {          //Mostramos el elemento cuando aparece su primer mitad
+                if(((element.getBoundingClientRect().top ) <= (window.innerHeight  - (element.offsetHeight / 2)))) element.classList.add("OoSwFF");   
+            })
+        }
+        window.addEventListener("resize", OoS);
+        window.addEventListener("orientationchange", OoS);
+        window.addEventListener("scroll", OoS);
+        OoS();
+
+        let tempo: NodeJS.Timeout;     //Si estamos 1 segundo sin hacer scroll y hay alguna parte de un elemento OoS visible lo mostramos
+        const handleTempo = () => {     //Se borra el temporizador actual y se crea un nuevo cada vez que hacemos scroll
+            clearTimeout(tempo);  
+            tempo = setTimeout(() => {
+                const OoSElements = document.querySelectorAll(".OoS");
+                const OoSElementsWf = document.querySelectorAll(".OoSwF");
+                OoSElements.forEach((element) => {
+                    if(((element.getBoundingClientRect().top) < (window.innerHeight))) element.classList.add("OoSS");
+                })
+                OoSElementsWf.forEach((element) => {
+                    if(((element.getBoundingClientRect().top) < (window.innerHeight))) element.classList.add("OoSwFF");
+                })
+            }, 1000);
+        }
+        window.addEventListener("resize", handleTempo);
+        window.addEventListener("orientationchange", handleTempo);
+        window.addEventListener("scroll", handleTempo);
+        handleTempo();
+
+        /**********************************************************************************************/
+
         const seccionToWaitImages = document.querySelector(".seccionToWaitImages");         //Espera que se carguen todas las imágenes en la pagina actual si esta tiene la clase "seccionToWaitImages"
         if (seccionToWaitImages) {                                                          // luego Deshabilita el spinner    
             const checkImages = async () => {

@@ -20,20 +20,46 @@
 }
 
 
-/*********************** Titles FadeIn Vertical ***********************/
+/********************************** OoS ********************************/
 
-.fadeInTitles1 {
-    animation-name: fadeInTitles1;
-    animation-duration: 0.75s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
+.OoS {
     opacity: 0;
 }
 
-@keyframes fadeInTitles1 {
+.OoSS {
+    animation-name: animationOfScroll; 
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animationOfScroll {
     0% {
         opacity: 0;
-        transform: translateY(3rem);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*********************** OoS With FadeIn Vertical ***********************/
+
+.OoSwF {
+    opacity: 0;
+}
+
+.OoSwFF {
+    animation-name: OoSwFF;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes OoSwFF {
+    0% {
+        opacity: 0;
+        transform: translateY(10vh);
     }
     100% {
         opacity: 1;

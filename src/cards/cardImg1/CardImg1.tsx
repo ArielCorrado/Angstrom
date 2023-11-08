@@ -22,7 +22,7 @@ function HomeCardImg1 (props: {imgSrc: string, text: string}) {
 
     return (
         <div className="homeCardImg1Cont flex" onMouseOver={showText} onMouseLeave={clearText}>
-            <img src={props.imgSrc} alt="Angstrom" className="homeCardImg1Img"/>
+            <img src={props.imgSrc} alt="Angstrom" className="homeCardImg1Img OoS"/>
             <div className="cardTeamFilter" ref={filterRef}></div>
             {cardText}
         </div>

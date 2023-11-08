@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <div className="seccionToWaitImages">
             <BgImage imgSrc="/images/backgrounds/contact3b.jpg" classFilter="" classImage="bgImageClassContact"/>
-            <div className='seccions seccionsWithPadding seccionContact fadeInTitles1 flex column'>
+            <div className='seccions seccionsWithPadding seccionContact OoSwF flex column'>
                 <div className="telEmailCont flex wrap">
                     <div className='tel-contacto flex'>
                         <a href="https://wa.me/+5491150961206" target='_blank' rel="noreferrer" className='flex'>
@@ -15,7 +15,7 @@ const Contact = () => {
                         </a>
                     </div>
                     <div className='email-contacto flex'>
-                        <a href="mailto:info@biweb.com.ar" className='flex'>
+                        <a href="mailto:info@angstrom.com.ar" className='flex'>
                             <img src="/images/icons/email2.png" alt="email" className='imgContactoEmail' />
                             <h2>info@angstrom.com.ar</h2>
                         </a>

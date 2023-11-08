@@ -21,7 +21,7 @@ function CardTeam (props: {imgSrc: string, name: string, position: string}) {
     }
 
     return (
-        <div className="homeCardImg1Cont cardTeamCont fadeInTitles1 flex" onMouseOver={showText} onMouseLeave={clearText}>
+        <div className="homeCardImg1Cont cardTeamCont fadeIn1 OoSwF flex" onMouseOver={showText} onMouseLeave={clearText}>
             <img src={props.imgSrc} alt="Angstrom card" className="homeCardImg1Img"/>
             <div className="cardTeamFilter" ref={filterRef}></div>
             <div className="cardTeamNameCont flex column">
