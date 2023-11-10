@@ -6,7 +6,9 @@ const waitAllImagesCharged = () : Promise <boolean> => {
             const imagesStatus : boolean[] = [];
             images.forEach((image) => {
                 image.complete? imagesStatus.push(true) : imagesStatus.push(false);     //Generamos un array de booleanos false: la imagen no se cargó, true: la imagen se cargó
-                console.log(image.complete, image.naturalWidth)
+                image.addEventListener("error", () => {                                 //Si alguna imagen no se puede cargar permitimos la visualizacion de todas pero sin chequear
+                    resolve(true);                                                      // si estan todas cargadas completamente por no haber un metodo para verificar error en un momento        
+                })                                                                      // dado
             })
             if (imagesStatus.every((imageStatus) => imageStatus)) {                     //Si todo el array tiene true es porque ya se cargaron todas las imagenes
                 resolve(true);                                                          //El resove(true) es para devolver algo, sino no deja compilar    
