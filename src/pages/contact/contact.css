@@ -153,8 +153,10 @@
 
     .tel-contacto, .email-contacto {
         margin-bottom: 0.75rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
-
+  
     .tel-contacto h2, .email-contacto h2 {
         margin-right: 0;
     }
