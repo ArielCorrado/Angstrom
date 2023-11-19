@@ -1,33 +1,26 @@
 const waitAllImagesCharged = () : Promise <boolean> => {
     return new Promise((resolve) => {
         const images = document.querySelectorAll("img");
-                
-        const checkIfAllImagesCharged = () => {
-            const imagesStatus : boolean[] = [];
-            images.forEach((image) => {
-                image.complete? imagesStatus.push(true) : imagesStatus.push(false);     //Generamos un array de booleanos false: la imagen no se cargó, true: la imagen se cargó
-                image.addEventListener("error", () => {                                 //Si alguna imagen no se puede cargar permitimos la visualizacion de todas pero sin chequear
-                    resolve(true);                                                      // si estan todas cargadas completamente por no haber un metodo para verificar error en un momento        
-                })                                                                      // dado
+        const allImagesCount = images.length;
+        let imagesCount = 0;
+              
+        images.forEach((image) => {
+                                                
+            if (image.complete) {                                                   //image.complete = true si la imagen se cargó completamente o dio error
+                imagesCount ++;                                                     
+                if (imagesCount >= allImagesCount) resolve(true);
+                return;
+            }
+            image.addEventListener("load", () => {                                  //Evento "load": La imagen pasó de cargando a cargada
+                imagesCount ++;
+                if (imagesCount >= allImagesCount) resolve(true);
             })
-            if (imagesStatus.every((imageStatus) => imageStatus)) {                     //Si todo el array tiene true es porque ya se cargaron todas las imagenes
-                resolve(true);                                                          //El resove(true) es para devolver algo, sino no deja compilar    
-            } 
-        }
-
-        const waitImagesToCharge = () => {                                              //Cada vez que una imagen se termina de cargar verificaos si se cargaron todas
-            images.forEach((image) => {
-                image.addEventListener("load", () => {
-                    checkIfAllImagesCharged();
-                })
+            image.addEventListener("error", () => {                                 //Evento "error": La imagen paso de cargando a error (no se pudo cargar)
+                imagesCount ++;
+                if (imagesCount >= allImagesCount) resolve(true);
             })
-        }
-
-        checkIfAllImagesCharged();
-        waitImagesToCharge();
-        checkIfAllImagesCharged();                                                      //Ponemos esta linea a lo ultimo por si se completaron todas la imagenes 
-    })                                                                                  // despues de "checkIfAllImagesCharged" y antes de empezar a cargar eventos "load"
+        })                                                      
+    })                                                                                  
 }                                                                                       
-
 
 export default waitAllImagesCharged;

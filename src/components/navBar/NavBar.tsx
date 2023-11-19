@@ -48,25 +48,30 @@ const NavBar = () => {
         window.addEventListener("scroll", handleTempo);
         handleTempo();
 
-        /**********************************************************************************************/
 
-        const seccionToWaitImages = document.querySelector(".seccionToWaitImages");         //Espera que se carguen todas las imágenes en la pagina actual si esta tiene la clase "seccionToWaitImages"
-        if (seccionToWaitImages) {                                                          // luego Deshabilita el spinner    
-            const checkImages = async () => {
-                showSpinner(true);
-                const animations = seccionToWaitImages.getAnimations({ subtree: true });
-                animations.forEach((animation) => {
-                        animation.pause();
+        /*********************************************************************************************************/
+        //Espera que se carguen todas las imágenes en la pagina actual si esta tiene la clase "seccionToWaitImages"
+                 
+        const checkImages = async () => {
+            const componentToWaitImages: HTMLElement | null = document.querySelector(".seccionToWaitImages");
+            if (componentToWaitImages) {
+                const animations = componentToWaitImages.getAnimations({ subtree: true });
+                animations.forEach((animation) => {                                 //Pausamos las animaciones
+                    animation.pause();
                 })
+
+                showSpinner(true);
                 await waitAllImagesCharged();
                 showSpinner(false);
-                seccionToWaitImages.classList.add("opacityOnCharge");
-                animations.forEach((animation) => {
+
+                componentToWaitImages.classList.add("opacityOnCharge");
+                animations.forEach((animation) => {                                 //Reanudamos las animaciones
                     animation.play();
                 })
             }
-            checkImages();
-        }        
+        }
+        checkImages();
+
 
         /******************************** NavBar dinamic colorizer per route **************************/
 
