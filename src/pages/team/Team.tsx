@@ -23,9 +23,9 @@ function Team() {
     const [showCv, setShowCv] = useState <boolean> (false);
     const [cv, setCv] = useState <ReactNode | null> (null);
 
-    const showCvFunction = (texto: JSX.Element, imgSrc: string) => {
+    const showCvFunction = (texto: JSX.Element, imgSrc: string, name: string, position: string) => {
         setShowCv(true);
-        setCv(<Cv text={texto} imgSrc={imgSrc} hiddenCvFunction={hiddenCvFunction}/>)
+        setCv(<Cv text={texto} imgSrc={imgSrc} hiddenCvFunction={hiddenCvFunction} name={name} position={position}/>)
     }
 
     const hiddenCvFunction = () => {
@@ -45,8 +45,8 @@ function Team() {
                     <>
                         <h1 className="titles">Nuestro Equipo</h1>
                         <div className="teamSeccionCardsCont flex wrap">
-                            <CardTeam imgSrc="/images/team/diego.jpg" name="Diego Corrado" position="Dibujante" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/diego.jpg")}/>
-                            <CardTeam imgSrc="/images/team/julia.jpg" name="Julia Dowley" position="Modelista" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/diego.jpg")}/>
+                            <CardTeam imgSrc="/images/team/diego.jpg" name="Diego Corrado" position="Dibujante" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/diego.jpg", "Diego Corrado", "Dibujante")}/>
+                            <CardTeam imgSrc="/images/team/julia.jpg" name="Julia Dowley" position="Modelista" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/diego.jpg", "Julia Dowley", "Modelista")}/>
                         </div>
                     </>
                 }

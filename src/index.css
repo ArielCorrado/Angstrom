@@ -11,15 +11,15 @@
     --color-web-2: #1D2D44;
     --color-web-3: #3E5C76; 
     --color-web-4: #748CAB;
-    --color-web-5: #ffffff;
-    --color-web-6: #F0EBD8;
-           
+    --color-web-5: #c9c9c9;
+    --color-web-6: #ffffff;
+               
     --alto-navbar: 4rem;
     --color-navbar: var(--color-web-1);
-    --color-navbar-hover: var(--color-web-6);
+    --color-navbar-hover: var(--color-web-4);
         
     --text-dark-color: rgb(68, 68, 68);
-    --text-light-color: var(--color-web-5);
+    --text-light-color: var(--color-web-6);
 
     --vertical-padding-seccions: 4rem;
     --horizontal-padding-seccions: 1rem;
