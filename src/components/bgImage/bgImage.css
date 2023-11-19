@@ -34,7 +34,6 @@
 }
 
 .bgImageClassContact {
-    filter: brightness(10%) contrast(90%); 
+    filter: brightness(20%) contrast(90%); 
     object-position: left;
 }
-
