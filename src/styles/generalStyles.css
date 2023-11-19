@@ -3,6 +3,7 @@
     margin-top: var(--alto-navbar);
     position: relative;
     z-index: 50;
+    overflow: hidden;
 }
 
 .seccionsWithPadding {
