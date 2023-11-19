@@ -22,7 +22,7 @@
 }
 
 .cvText p {
-    font-size: 0.8rem;
+    font-size: 0.80rem;
     line-height: 1.5;
     text-align: left;
     margin-bottom: 0.75rem;
@@ -80,6 +80,11 @@
     .cvTextCont {
         text-align: center;
     }
+
+    .cvText p {
+        font-size: var(--font-size-letras-chicas-portrait);
+    }
+    
 
     @keyframes cvContFadeInDer {
         0% {

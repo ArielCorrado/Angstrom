@@ -29,8 +29,8 @@
     --buttons-bg: var(--color-web-3);
     --buttons-hover-bg: #52708a;
     
-    --font-size-letras-mayusculas-portrait: 16px;
-    --font-size-letras-minusculas-portrait: 19px;
+    --font-size-letras-chicas-portrait: 16px;
+    --font-size-letras-grandes-portrait: 19px;
     --font-style-principal: 'Poppins', sans-serif;
    
     --border-with-bg-white: rgb(219, 219, 219);
