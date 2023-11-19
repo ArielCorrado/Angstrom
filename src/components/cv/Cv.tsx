@@ -9,7 +9,7 @@ function Cv (props: {text: JSX.Element, imgSrc: string, hiddenCvFunction: () => 
             <img src="/images/icons/close.png" alt="Close Icon" onClick={() => props.hiddenCvFunction()} className="cvCloseIcon" />
             <div className="cvCont flex">
                 <div className="cvTextCont">
-                    <img src={props.imgSrc} alt="CV team" className="cvImage" />
+                    <img src={props.imgSrc} alt="CV team" className="cvImage opacityOnCharge opacityOnCharge1s5" />
                     {props.text}
                 </div>
             </div>

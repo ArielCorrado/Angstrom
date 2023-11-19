@@ -9,13 +9,11 @@
 
 @keyframes cvContFadeInDer {
     0% {
-        transform: translateX(15%);
-        opacity: 0;
+        transform: translateX(10%);
     }
     100% {
         transform: translateX(0);
-        opacity: 1;
-    }
+   }
 }
 
 .cvTextCont {
@@ -41,11 +39,15 @@
     position: fixed;
     top: calc(var(--alto-navbar) + 1rem);
     right: 1rem;
-    filter: invert(90%);
+    filter: invert(80%);
     height: 1.5rem;
     width: 1.5rem;
     cursor: pointer;
     z-index: 200;
+}
+
+.cvCloseIcon:hover {
+    filter: invert(100%);
 }
 
 @media only screen and (orientation: portrait) {
@@ -61,4 +63,14 @@
     .cvTextCont {
         text-align: center;
     }
+
+    @keyframes cvContFadeInDer {
+        0% {
+            transform: translateX(40%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
 }

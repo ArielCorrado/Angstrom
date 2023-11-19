@@ -194,7 +194,7 @@ const NavBar = () => {
     return (
         <div className="contMenu flex opacityOnCharge">
             <div className="navBarContLogoEidioma flex">
-                <Link to="/home" className="navBarContLogo flex"><img src="/images/logos/logoColor.png" alt="Logo Tropicalia" className="navBarLogo" /></Link>
+                <Link to="/home" className="navBarContLogo flex"><img src="/images/logos/logo.png" alt="Logo Tropicalia" className="navBarLogo" /></Link>
             </div>
             <img className="iconoMenu" src="/images/icons/menu.png" alt="Icono Menu"/>
             <div className="tapaMenu"></div>

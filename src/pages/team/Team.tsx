@@ -8,7 +8,7 @@ import Cv from "../../components/cv/Cv";
 function Team() {
 
     const cvDiegoText = 
-    <div className="cvText">
+    <div className="cvText opacityOnCharge opacityOnCharge1s5">
         <p>Mi nombre es Diego Corrado soy un apasionado profesional con una trayectoria de 28 años en el fascinante mundo del dibujo técnico y unos 16 años en la industria del mármol y el granito, así como en el sector de la construcción.</p>
         <p>Mi viaje en el dibujo técnico comenzó hace 28 años, y desde entonces he dedicado mi vida a perfeccionar mis habilidades y adquirir un profundo conocimiento en esta disciplina.</p>
         <p>Mi experiencia abarca una amplia gama de proyectos, desde diseño arquitectónico hasta planos detallados, siempre buscando la excelencia y la precisión en cada trazo.</p>
