@@ -14,3 +14,10 @@
     font-size: 2.5rem;
     text-transform: uppercase;
 }
+
+
+/************ Sweetalert2 ************/
+
+.swal2-icon-content {
+    color: var(--buttons-bg); 
+}
