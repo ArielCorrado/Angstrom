@@ -1,0 +1,8 @@
+.recaptcha {
+    position: fixed;
+    height: calc(100vh - var(--alto-navbar));
+    top: var(--alto-navbar);
+    width: 100%;
+    background-color: #0d1321e8;
+    z-index: 500;
+}

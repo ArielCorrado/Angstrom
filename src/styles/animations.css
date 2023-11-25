@@ -23,6 +23,10 @@
     animation-duration: 1.5s;
 }
 
+.opacityOnCharge0s5 {
+    animation-duration: 0.5s;
+}
+
 /********************************** OoS ********************************/
 
 .OoS {
