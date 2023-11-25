@@ -66,7 +66,7 @@ const Contact = () => {
             if (respOBJ.msg.includes("Error")) {
                 swalPopUp("Ops!", `${respOBJ.msg}, Intente otra vez`, "error");
             } else {
-                const inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll(".inputsForm");
+                const inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll(".inputForm");
                 inputs.forEach((input) => input.value = "");
                 // contactAds();           //Llamada a funcion de conversion de google ads
                 swalPopUp("Enviado!", "Mensaje enviado con éxito, gracias por contactarnos!", "success");
