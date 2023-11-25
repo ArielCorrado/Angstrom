@@ -27,10 +27,15 @@ const Contact = () => {
 
         if (data.nombre.trim() !== "" && data.telefono.trim() !== "" && data.email.trim() !== "" && data.empresa.trim() !== "" && data.mensaje.trim() !== "") {
 
+            const closeCaptcha = () => {
+                setCaptcha(null);
+                document.body.style.overflow = "initial";
+            }
+
             setCaptcha(
                 <Recaptcha 
                     callBackFunction={sendForm} 
-                    closeCaptcha={() => setCaptcha(null)}
+                    closeCaptcha={closeCaptcha}
                 />
             )
 
