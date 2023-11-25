@@ -55,7 +55,6 @@
     font-family: var(--font-style-principal);
     color: var(--text-light-color);
     text-align: center;
-    user-select: none;
 }
 
 body {

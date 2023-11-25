@@ -1,0 +1,18 @@
+.wsFloatingCont {
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+    z-index: 500;
+}
+
+.wsFloating {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.opacityOnChargeDelay {
+    animation-delay: 1.75s;
+}

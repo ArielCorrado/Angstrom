@@ -3,7 +3,7 @@
     top: var(--alto-navbar);
     height: calc(100vh - var(--alto-navbar));
     left: 0;
-    width: 100%;
+    width: 100vw;
     z-index: -1;
 }
 

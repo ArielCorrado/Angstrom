@@ -10,6 +10,7 @@ import Team from './pages/team/Team';
 import { Navigate } from 'react-router-dom';
 import Contact from './pages/contact/Contact';
 import Footer from './components/footer/Footer';
+import WsFloating from './components/wsFloating/WsFloating';
 
 function App() {
     const { spinner } = useContext <SpinnerContextType> (SpinnerContext);
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/contact" element={<Contact/>}/>     
                 <Route path="*" element={<Navigate to="/home"/>}/>            
             </Routes>
+            <WsFloating/>
             <Footer/>
         </BrowserRouter>
     );

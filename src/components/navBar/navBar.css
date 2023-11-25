@@ -1,6 +1,6 @@
 .contMenu {
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: var(--alto-navbar);
     top: 0;
     left: 0;
