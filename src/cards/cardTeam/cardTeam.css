@@ -10,7 +10,7 @@
     position: absolute;
     background-color: var(--color-web-2);
     width: 80%;
-    height: 20%;
+    height: 25%;
     top: 100%;
     transform: translateY(-50%);
 }
@@ -22,7 +22,7 @@
 }
 
 .cardTeamPosition {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
     text-transform: none;
     font-size: 0.8rem;
     opacity: 0.80;

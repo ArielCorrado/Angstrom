@@ -16,8 +16,6 @@ function Team() {
            No solo en el dibujo y desarrollo de ingeniería de trabajos complejos si no también en el desarrollo de procesos en base a programas CAD-CAM avanzados.</p>
         <p>Mi experiencia en este sector me ha permitido trabajar en proyectos emocionantes, desde la selección de materiales hasta la planificación y ejecución de instalaciones, brindando soluciones creativas y estéticas a cada desafío.</p>
         <p>Además, he tenido el privilegio de sumar 8 años de experiencia en el mundo de la construcción, donde he participado en diversas empresas, aportando mi experiencia en la coordinación de proyectos y asegurando la implementación exitosa de diseños y conceptos.</p>
-        <p>A lo largo de mi carrera, he cultivado un compromiso inquebrantable con la calidad y la eficiencia en cada tarea que emprendo. Mi enfoque no solo se centra en la ejecución técnica, sino también en comprender las necesidades específicas de cada proyecto y cliente, buscando siempre superar expectativas.</p>
-        <p>Explora mi portafolio y descubre la fusión única de mi experiencia en dibujo técnico, la industria del mármol y el granito, así como en la construcción.</p>
     </div>
     
     const [showCv, setShowCv] = useState <boolean> (false);
@@ -45,8 +43,8 @@ function Team() {
                     <>
                         <h1 className="titles">Nuestro Equipo</h1>
                         <div className="teamSeccionCardsCont flex wrap">
-                            <CardTeam imgSrc="/images/team/diego.jpg" name="Diego Corrado" position="Dibujante" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/diego.jpg", "Diego Corrado", "Dibujante")}/>
-                            <CardTeam imgSrc="/images/team/julia.jpg" name="Julia Dowley" position="Modelista" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/julia.jpg", "Julia Dowley", "Modelista")}/>
+                            <CardTeam imgSrc="/images/team/diego2.jpg" name="Diego Corrado" position="M.M.O , Dibujante Técnico" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/diego2.jpg", "Diego Corrado", "M.M.O , Dibujante Técnico")}/>
+                            <CardTeam imgSrc="/images/team/julia.jpg" name="Julia Dowley" position="Diseñadora Industrial" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/julia.jpg", "Julia Dowley", "Diseñadora Industrial")}/>
                         </div>
                     </>
                 }
