@@ -46,9 +46,6 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         if (typeof imgPos === "number") {
             setImgSrc(props.imgsRoutes[imgPos]);
             imgPosRef.current = imgPos;
-
-            console.log(imgPos)
-            console.log(imgSrc)
         }
     }, [imgPos])   
 
@@ -56,18 +53,18 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         if (opc) {
             if (imgPosRef.current === props.imgsRoutes.length - 1) {
                 setimgPos(0);
-                console.log("set")
+                
             } else {
                 setimgPos(imgPosRef.current + 1);
-                console.log("set")
+                
             }  
         } else {
             if (imgPosRef.current === 0) {
                 setimgPos(props.imgsRoutes.length - 1);
-                console.log("set")
+                
             }  else {
                 setimgPos(imgPosRef.current - 1);
-                console.log("set")
+                
             }
         }
     }    
@@ -80,8 +77,7 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
                 img.classList.add("opacityOnCharge");
             }, 100);
         }
-        // console.log(imgSrc)
-        // console.log(imgPos)
+       
         //eslint-disable-next-line
     }, [imgSrc]);
              
