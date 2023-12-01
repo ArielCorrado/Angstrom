@@ -70,7 +70,7 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
     useEffect(() => {
         if (typeof imgPos === "number") {
             imgPosRef.current = imgPos;
-            const img = document.querySelector(".carouselActualImg") as HTMLImageElement;
+            const img = document.querySelector(".carouselCenterImg") as HTMLImageElement;
             img.classList.remove("opacityOnCharge");
             setTimeout(() => {
                 img.classList.add("opacityOnCharge");
@@ -84,9 +84,9 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
             <img src="/images/icons/close.png" className='cvCloseIcon carouselCloseIcon' alt="Exit Icon" onClick={() => {props.closeFunction(); document.body.style.overflow = "initial"}}/>
             <img src="/images/icons/next.png" className='carouselNextIcon' alt="Next Icon" onClick={() => nextImage(true)}/>
             <img src="/images/icons/next.png" className='carouselPrevIcon' alt="Prev Icon" onClick={() => nextImage(false)}/>
-            {/* <img src={imgSrc} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" /> */}
-            <img src={props.imgsRoutes[imgPos]} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" />
-            {/* <img src={imgSrc} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" /> */}
+            <img src={props.imgsRoutes[imgPosAdjust(imgPos - 1)]} className={`carouselImg carouselPrevImg ${props.imgClass}`} alt="Carousel Img" />
+            <img src={props.imgsRoutes[imgPos]} className={`carouselImg carouselCenterImg ${props.imgClass}`} alt="Carousel Img" />
+            <img src={props.imgsRoutes[imgPosAdjust(imgPos + 1)]} className={`carouselImg carouselNextImg ${props.imgClass}`} alt="Carousel Img" />
         </div>        
     );
 }

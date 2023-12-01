@@ -23,7 +23,7 @@
     }
 }
 
-.carouselActualImg {
+.carouselImg {
     position: absolute;
     right: 0;
     left: 0;
@@ -36,6 +36,15 @@
     border: 1px solid rgb(54, 54, 54);
     opacity: 0;
 }
+
+.carouselPrevImg {
+    transform: translateX(-100%);
+}
+
+.carouselNextImg {
+    transform: translateX(100%);
+}
+
 
 .carouselActualImgOutRight {
     animation-name: carouselActualImgOutRight;
