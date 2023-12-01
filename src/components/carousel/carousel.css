@@ -1,0 +1,81 @@
+.carouselCont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.990);
+    z-index: 1100;
+    animation-name: carouselScaleIn;
+    animation-duration: 0.75s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes carouselScaleIn {
+    0%{
+        opacity: 0;
+        transform: scale(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+.carouselActualImg {
+    max-height: 90%;
+    max-width: 95%;
+    filter: contrast(120%) grayscale(0) saturate(120%);
+    border: 1px solid rgb(54, 54, 54);
+    opacity: 0;
+}
+
+.carouselActualImgOpOn {
+    animation-name: carouselActualImgOpOn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes carouselActualImgOpOn {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.carouselNextIcon, .carouselPrevIcon {
+    height: 2.5rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1rem;
+    margin: auto;
+    filter: invert(80%);    
+    cursor: pointer;
+    z-index: 250;
+}
+
+.carouselPrevIcon {
+    right: unset;
+    left: 1rem;
+    transform: scale(-1);
+}
+
+.carouselNextIcon:hover, .carouselPrevIcon:hover {
+    filter: invert(100%);
+}
+
+.carouselCloseIcon {
+    top: 1rem !important;
+}
+
+@media only screen and (orientation: portrait) {
+    .carouselNextIcon, .carouselPrevIcon {
+        display: none;
+    }
+}
