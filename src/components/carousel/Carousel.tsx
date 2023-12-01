@@ -42,6 +42,12 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         // eslint-disable-next-line
     }, []);
 
+    const imgPosAdjust = (pos: number) => {
+        if (pos >= props.imgsRoutes.length) return 0;
+        if (pos < 0) return props.imgsRoutes.length - 1;
+        return pos;
+    }
+
     useEffect(() => {
         if (typeof imgPos === "number") {
             setImgSrc(props.imgsRoutes[imgPos]);
@@ -86,7 +92,9 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
             <img src="/images/icons/close.png" className='cvCloseIcon carouselCloseIcon' alt="Exit Icon" onClick={() => {props.closeFunction(); document.body.style.overflow = "initial"}}/>
             <img src="/images/icons/next.png" className='carouselNextIcon' alt="Next Icon" onClick={() => nextImage(true)}/>
             <img src="/images/icons/next.png" className='carouselPrevIcon' alt="Prev Icon" onClick={() => nextImage(false)}/>
-            <img src={imgSrc!} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" />
+            {/* <img src={imgSrc} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" /> */}
+            <img src={imgSrc} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" />
+            {/* <img src={imgSrc} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" /> */}
         </div>        
     );
 }

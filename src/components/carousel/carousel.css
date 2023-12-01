@@ -24,6 +24,12 @@
 }
 
 .carouselActualImg {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     max-height: 90%;
     max-width: 95%;
     filter: contrast(120%) grayscale(0) saturate(120%);
