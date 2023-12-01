@@ -3,7 +3,6 @@ import "./carousel.css";
 
 const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: string, closeFunction: () => void}) => {
     
-    const [imgSrc, setImgSrc] = useState <string> (props.imgsRoutes[parseInt(props.imgSelectPos)]);
     const [imgPos, setimgPos] = useState <number> (parseInt(props.imgSelectPos));
     const imgPosRef = useRef(imgPos);
    
@@ -47,14 +46,7 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         if (pos < 0) return props.imgsRoutes.length - 1;
         return pos;
     }
-
-    useEffect(() => {
-        if (typeof imgPos === "number") {
-            setImgSrc(props.imgsRoutes[imgPos]);
-            imgPosRef.current = imgPos;
-        }
-    }, [imgPos])   
-
+ 
     const nextImage = (opc: boolean) => {
         if (opc) {
             if (imgPosRef.current === props.imgsRoutes.length - 1) {
@@ -76,16 +68,16 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
     }    
     
     useEffect(() => {
-        if (imgSrc) {
+        if (typeof imgPos === "number") {
+            imgPosRef.current = imgPos;
             const img = document.querySelector(".carouselActualImg") as HTMLImageElement;
             img.classList.remove("opacityOnCharge");
             setTimeout(() => {
                 img.classList.add("opacityOnCharge");
             }, 100);
         }
-       
         //eslint-disable-next-line
-    }, [imgSrc]);
+    }, [imgPos]);
              
     return (
         <div className='carouselCont flex'>
@@ -93,7 +85,7 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
             <img src="/images/icons/next.png" className='carouselNextIcon' alt="Next Icon" onClick={() => nextImage(true)}/>
             <img src="/images/icons/next.png" className='carouselPrevIcon' alt="Prev Icon" onClick={() => nextImage(false)}/>
             {/* <img src={imgSrc} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" /> */}
-            <img src={imgSrc} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" />
+            <img src={props.imgsRoutes[imgPos]} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" />
             {/* <img src={imgSrc} className={`carouselActualImg ${props.imgClass}`} alt="Carousel Img" /> */}
         </div>        
     );
