@@ -35,13 +35,14 @@
 
 .bgImageClassContact {
     filter: brightness(20%) contrast(95%) grayscale(25%); 
-    object-position: left;
+    object-position: top 25% right 0;
 }
 
 @media only screen and (orientation: portrait) {
-
+    
     .bgImageClassContact {
         filter: brightness(25%) contrast(90%) grayscale(50%); 
+        object-position: center;
     }
 
 }

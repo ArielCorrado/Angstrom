@@ -1,7 +1,7 @@
 import "./cardTeam.css"
 import {ReactNode, useState, useRef} from "react"
 
-function CardTeam (props: {imgSrc: string, name: string, position: string, showCvFunction: () => void}) {
+function CardTeam (props: {imgSrc: string, name: string, position: string, imgClass: string, showCvFunction: () => void}) {
 
     const [cardText, setCardText] = useState <ReactNode | null> (null);
     const filterRef = useRef <HTMLImageElement | null> (null);
@@ -22,7 +22,7 @@ function CardTeam (props: {imgSrc: string, name: string, position: string, showC
 
     return (
         <div className="homeCardImg1Cont cardTeamCont fadeIn1 OoSwF flex" onMouseOver={showText} onMouseLeave={clearText} onClick={() => props.showCvFunction()}>
-            <img src={props.imgSrc} alt="Angstrom card" className="homeCardImg1Img"/>
+            <img src={props.imgSrc} alt="Angstrom card" className={`homeCardImg1Img ${props.imgClass}`}/>
             <div className="cardTeamFilter" ref={filterRef}></div>
             <div className="cardTeamNameCont flex column">
                 <p className="cardTeamName">{props.name}</p>

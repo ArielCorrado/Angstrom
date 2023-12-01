@@ -3,7 +3,7 @@ import "./cv.css";
 function Cv (props: {text: JSX.Element, imgSrc: string, hiddenCvFunction: () => void, name: string, position: string}) {
 
     window.scrollTo({top: 0});
-
+  
     return (
         <>
             <img src="/images/icons/close.png" alt="Close Icon" onClick={() => props.hiddenCvFunction()} className="cvCloseIcon" />

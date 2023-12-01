@@ -5,7 +5,7 @@ import BgImage from "../../components/bgImage/BgImage";
 import { ReactNode, useState } from "react";
 import Cv from "../../components/cv/Cv";
 
-function Team() {
+function Team () {
 
     const cvDiegoText = 
     <div className="cvText opacityOnCharge opacityOnCharge1s5">
@@ -17,7 +17,16 @@ function Team() {
         <p>Mi experiencia en este sector me ha permitido trabajar en proyectos emocionantes, desde la selección de materiales hasta la planificación y ejecución de instalaciones, brindando soluciones creativas y estéticas a cada desafío.</p>
         <p>Además, he tenido el privilegio de sumar 8 años de experiencia en el mundo de la construcción, donde he participado en diversas empresas, aportando mi experiencia en la coordinación de proyectos y asegurando la implementación exitosa de diseños y conceptos.</p>
     </div>
-    
+
+    const cvJuliaText = 
+    <div className="cvText opacityOnCharge opacityOnCharge1s5">
+        <p>Especialista en Tecnología de Envases y Embalajes.</p>
+        <p>Como diseñadora industrial especializada en envases y embalajes, siento una profunda pasión por la creación humana. Mi herencia familiar artística me ha otorgado una alta sensibilidad hacia la capacidad del ser humano para crear, aprender y dejar ser.</p>
+        <p>Aunque comencé mi carrera como diseñadora de mobiliario, mi verdadera pasión se encuentra en el diseño de packaging. Después de especializarme en el Instituto Argentino del Envase, decidí dedicarme por completo a ayudar a mis clientes a hacer realidad sus proyectos, creando conceptos a medida bajo valores que compartimos.</p>
+        <p>En un mercado tan complejo y desafiante como el actual, creo firmemente que el diseño es una pieza clave para articular deseos y necesidades, así como impulsar el posicionamiento de las marcas.</p>
+        <p>Me encanta investigar nuestro vínculo como seres humanos con la tecnología y la biología, lo que me inspira constantemente en mi trabajo. La ciencia ficción y la naturaleza son dos fuentes de inspiración que siempre están presentes en mi proceso creativo</p>
+    </div>
+
     const [showCv, setShowCv] = useState <boolean> (false);
     const [cv, setCv] = useState <ReactNode | null> (null);
 
@@ -43,8 +52,8 @@ function Team() {
                     <>
                         <h1 className="titles">Nuestro Equipo</h1>
                         <div className="teamSeccionCardsCont flex wrap">
-                            <CardTeam imgSrc="/images/team/diego2.jpg" name="Diego Corrado" position="M.M.O , Dibujante Técnico" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/diego2.jpg", "Diego Corrado", "M.M.O , Dibujante Técnico")}/>
-                            <CardTeam imgSrc="/images/team/julia.jpg" name="Julia Dowley" position="Diseñadora Industrial" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/julia.jpg", "Julia Dowley", "Diseñadora Industrial")}/>
+                            <CardTeam imgSrc="/images/team/diego2.jpg" name="Diego Corrado" position="M.M.O - Dibujante Técnico" imgClass="" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/diego2.jpg", "Diego Corrado", "M.M.O - Dibujante Técnico")}/>
+                            <CardTeam imgSrc="/images/team/julia.jpg" name="Julia Dowbley" position="Diseñadora Industrial" imgClass="cardJuliaImg" showCvFunction={() => showCvFunction(cvJuliaText, "/images/team/julia.jpg", "Julia Dowbley", "Diseñadora Industrial")}/>
                         </div>
                     </>
                 }

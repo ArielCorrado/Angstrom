@@ -7,8 +7,6 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
     const imgPosRef = useRef(imgPos);
        
     useEffect(() => {
-                            
-        /*********************************************************************/
         let startX: number;
         let startY: number;
         let endX: number;
@@ -26,18 +24,13 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
             const Ay = Math.abs(endY - startY);
             if (Ax > 50 && Ay < 100) {
                 nextImage(false);
-                // console.log("prev")
             } else if (Ax < -50 && Ay < 100) {
                 nextImage(true);
-                // console.log("next")
             }
         }
 
         elemento?.addEventListener("touchstart", start);
         elemento?.addEventListener("touchend", end);
-
-        /*********************************************************************/
-        
         // eslint-disable-next-line
     }, []);
 
@@ -111,7 +104,7 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
                 centerImg.classList.add("carouselOpOff", "moveCenterToLeft", "transitionOpOn");
                 rightImg.classList.add("carouselOpOn", "moveRightToCenter", "transitionOpOn");
                 waitAnimations(opc);
-            }, 100);
+            }, 0);
         } else {
             centerImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOpOn");
             leftImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOpOn");
@@ -119,7 +112,7 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
                 centerImg.classList.add("carouselOpOff", "moveCenterToRight", "transitionOpOn");
                 leftImg.classList.add("carouselOpOn", "moveLeftToCenter", "transitionOpOn");
                 waitAnimations(opc);
-            }, 100);
+            }, 0);
         }
     }    
 

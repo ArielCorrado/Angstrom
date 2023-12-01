@@ -1,5 +1,4 @@
 .cvCont {
-    min-height: calc(100vh - var(--alto-navbar));
     width: 100%;
     animation-name: cvContFadeInDer;
     animation-timing-function: ease-out;

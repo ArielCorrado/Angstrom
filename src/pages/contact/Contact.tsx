@@ -83,7 +83,7 @@ const Contact = () => {
         <>
             {captcha}
             <div className="seccionToWaitImages">
-                <BgImage imgSrc="/images/backgrounds/contact3b.jpg" classFilter="" classImage="bgImageClassContact"/>
+                <BgImage imgSrc="/images/backgrounds/contact.jpeg" classFilter="" classImage="bgImageClassContact"/>
                 <div className='seccions seccionsWithPadding seccionContact OoSwF flex column'>
                     <div className="telEmailCont flex wrap">
                         <div className='tel-contacto flex'>
