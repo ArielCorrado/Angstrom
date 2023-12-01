@@ -34,35 +34,94 @@
     max-width: 95%;
     filter: contrast(120%) grayscale(0) saturate(120%);
     border: 1px solid rgb(54, 54, 54);
-    opacity: 0;
 }
 
-.carouselPrevImg {
-    transform: translateX(-100%);
+.transitionOpOn {
+    transition-duration: 1s;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
 }
 
-.carouselNextImg {
-    transform: translateX(100%);
-}
-
-
-.carouselActualImgOutRight {
-    animation-name: carouselActualImgOutRight;
+.moveCenterToLeft {
+    animation-name: moveCenterToLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    opacity: 0;
 }
 
-@keyframes carouselActualImgOutRight {
+@keyframes moveCenterToLeft {
     0%{
-        opacity: 1;
         transform: translateX(0);
     }
     100% {
-        opacity: 0;
-        transform: translateX(100vw);
+        transform: translateX(-100%);
     }
+}
+
+.moveRightToCenter {
+    animation-name: moveRightToCenter;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveRightToCenter {
+    0%{
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.moveCenterToRight {
+    animation-name: moveCenterToRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveCenterToRight {
+    0%{
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.moveLeftToCenter {
+    animation-name: moveLeftToCenter;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveLeftToCenter {
+    0%{
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.carouselLeftImg {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.carouselRightImg {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.carouselOpOn {
+    opacity: 1;
+}
+
+.carouselOpOff {
+    opacity: 0;
 }
 
 .carouselNextIcon, .carouselPrevIcon {
@@ -93,6 +152,8 @@
 
 @media only screen and (orientation: portrait) {
     .carouselNextIcon, .carouselPrevIcon {
-        display: none;
+        bottom: 1rem;
+        top: unset;
+        margin: unset;
     }
 }
