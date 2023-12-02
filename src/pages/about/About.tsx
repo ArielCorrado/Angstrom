@@ -17,7 +17,7 @@ function About() {
                 <div className="aboutTextDiv flex"><span className="bullet">●</span><p>Planos de fabricacion e instalacion de muebles de oficinas</p></div>
                 <div className="aboutTextDiv flex"><span className="bullet">●</span><p>Desarrollo de planos de fabricacion de piezas para un proyecto de avion ultraliviano fabricado en argentina</p></div>
                 <div className="aboutTextDiv flex"><span className="bullet">●</span><p>Consultoria y desarrollo de proyectos de piedra avanzados (marmol y granito)</p></div>
-                <div className="aboutTextDiv flex"><span className="bullet">●</span><p>Confíe en nosotros para transformar la gestión de la documentación técnica en un activo estratégico para su empresa.</p></div>
+                <p className="aboutLargeText2">Confíe en nosotros para transformar la gestión de la documentación técnica en un activo estratégico para su empresa.</p>
             </div>
         </div>
     )
