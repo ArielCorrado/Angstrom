@@ -1,6 +1,7 @@
 import "./slider.css";
 import BgHome from "../bgRule/BgRule";
 import BgImage from "../bgImage/BgImage";
+import { Link } from "react-router-dom";
 
 function Slider() {
     return (
@@ -19,7 +20,7 @@ function Slider() {
                         <p className="sliderText1 sliderTexts_AnimationOnEnter">Angström</p>
                         <p className="sliderText2 sliderTexts_AnimationOnEnter animation_delay025">Técnica</p>
                         <p className="sliderText3 sliderTexts_AnimationOnEnter animation_delay050">Somos una consultora de <br />documentación técnica <br />de la industria de la <br />construcción</p>
-                        <button className="sliderButton sliderTexts_AnimationOnEnter animation_delay075 flex">Conocer más</button>
+                        <Link to="/portfolio"><button className="sliderButton sliderTexts_AnimationOnEnter animation_delay075 flex">Conocer más</button></Link>
                     </div>
                 </div>
             </div>

@@ -6,6 +6,7 @@
     width: 20rem;
     margin: 1rem;
     background-color: white;
+    border-radius: 0.125rem;
 }
 
 .portfolioCards img {
@@ -20,6 +21,7 @@
 
     .portfolioCards {
         width: 100%;
+        aspect-ratio: 12/9;
         margin: 0;
         margin-top: 1rem;
     }

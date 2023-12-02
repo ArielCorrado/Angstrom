@@ -51,11 +51,11 @@ function Portfolio() {
             <h1 className="titles portfolioTitle">Portfolio</h1>
             <div className="portfolio2ImgsCont flex wrap">
                 <CardImg1 imgSrc="/images/portfolio/1.jpeg" cardClass="portfolioCards OoS" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/portfolio/2.jpeg" cardClass="portfolioCards OoS" text="Ampliar Imagen" />
+                <CardImg1 imgSrc="/images/portfolio/4.jpeg" cardClass="portfolioCards OoS" text="Ampliar Imagen" />
             </div>
             <div className="portfolio2ImgsCont flex wrap">
                 <CardImg1 imgSrc="/images/portfolio/3.jpeg" cardClass="portfolioCards OoS" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/portfolio/4.jpeg" cardClass="portfolioCards OoS" text="Ampliar Imagen" />
+                <CardImg1 imgSrc="/images/portfolio/2.jpeg" cardClass="portfolioCards OoS" text="Ampliar Imagen" />
             </div>
         </div>
     )
