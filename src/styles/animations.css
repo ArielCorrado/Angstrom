@@ -210,3 +210,21 @@
 .animation_delay075 {
     animation-delay: 1.0s;
 }
+
+/**************************************************************/
+
+.fadeInDer {
+    animation-name: fadeInDer;
+    animation-timing-function: ease-out;
+    animation-duration: 0.65s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInDer {
+    0% {
+        transform: translateX(10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

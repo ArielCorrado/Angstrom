@@ -16,7 +16,7 @@
 }
 
 .cardTeamName {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: 400;
     margin-bottom: 0.25rem;
@@ -49,7 +49,7 @@
     }
 
     .cardTeamName {
-        font-size: var(--font-size-letras-chicas-portrait);
+        font-size: var(--font-size-letras-grandes-portrait);
     }
     
     .cardTeamPosition {
