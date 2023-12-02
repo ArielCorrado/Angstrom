@@ -1,0 +1,27 @@
+.portfolio2ImgsCont {
+    width: 100%;
+}
+
+.portfolioCards {
+    width: 20rem;
+    margin: 1rem;
+    background-color: white;
+}
+
+.portfolioCards img {
+    object-fit: contain;
+}
+
+.portfolioTitle {
+    margin-bottom: 2rem;
+}
+
+@media only screen and (orientation: portrait) {
+
+    .portfolioCards {
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+    }
+    
+}

@@ -1,10 +1,12 @@
-import "./homePhotos1.css"
-import CardImg1 from "../../cards/cardImg1/CardImg1"
-import Carousel from "../carousel/Carousel"
-import { useState, useEffect } from "react"
+import "./portfolio.css";
+import CardImg1 from "../../cards/cardImg1/CardImg1";
+import Carousel from "../../components/carousel/Carousel";
+import {useState, useEffect} from "react";
+import BgImage from "../../components/bgImage/BgImage";
+import BgHome from "../../components/bgRule/BgRule";
 
-function HomePhotos1() {
-    
+function Portfolio() {
+
     const [carousel, setCarousel] = useState <JSX.Element | null> (null);
     
     useEffect(() => {
@@ -42,20 +44,21 @@ function HomePhotos1() {
     }, []);
 
     return (
-        <>
+        <div className="seccions seccionToWaitImages seccionsWithPadding flex column">
             {carousel}
-            <div className="homePhotos1Cont flex wrap">
-                <CardImg1 imgSrc="/images/design/1.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/2.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/3.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/4.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/5.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/6.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/7.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/8.jpeg" cardClass="" text="Ampliar Imagen" />
+            <BgImage imgSrc="/images/backgrounds/bg3.jpg" classImage="bgImageClassTeam" classFilter="bgImageFilterOpacityTeam"/>
+            <BgHome/>
+            <h1 className="titles portfolioTitle">Portfolio</h1>
+            <div className="portfolio2ImgsCont flex wrap">
+                <CardImg1 imgSrc="/images/portfolio/1.jpeg" cardClass="portfolioCards OoS" text="Ampliar Imagen" />
+                <CardImg1 imgSrc="/images/portfolio/2.jpeg" cardClass="portfolioCards OoS" text="Ampliar Imagen" />
             </div>
-        </>
+            <div className="portfolio2ImgsCont flex wrap">
+                <CardImg1 imgSrc="/images/portfolio/3.jpeg" cardClass="portfolioCards OoS" text="Ampliar Imagen" />
+                <CardImg1 imgSrc="/images/portfolio/4.jpeg" cardClass="portfolioCards OoS" text="Ampliar Imagen" />
+            </div>
+        </div>
     )
 }
 
-export default HomePhotos1
+export default Portfolio

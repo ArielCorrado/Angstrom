@@ -76,7 +76,7 @@ const NavBar = () => {
         /******************************** NavBar dinamic colorizer per route **************************/
 
         const navBarNamesRef = [
-            ["/home", "home"], ["/team", "equipo"], ["/contact", "contacto"], ["/about", "nosotros"]  //Posicion 0: texto que tiene que tener la ruta, posicion 1: texto que tiene que tener la opcion del navbar
+            ["/home", "home"], ["/team", "equipo"], ["/contact", "contacto"], ["/about", "nosotros"], ["/portfolio", "portfolio"]  //Posicion 0: texto que tiene que tener la ruta, posicion 1: texto que tiene que tener la opcion del navbar
         ]    
 
         const actualOptionsArray = navBarNamesRef.find((el) => thisLocation.pathname.includes(el[0]));
@@ -200,7 +200,7 @@ const NavBar = () => {
             <div className="tapaMenu"></div>
             <div className="menu flex">
                 <Link className="opcion flex" to="/home">Home</Link>
-                <Link className="opcion flex" to="/home">Portfolio</Link>
+                <Link className="opcion flex" to="/portfolio">Portfolio</Link>
                 <Link className="opcion flex" to="/team">Equipo</Link>
                 <Link className="opcion flex" to="/about">Nosotros</Link>
                 <Link className="opcion flex" to="/contact">Contacto</Link>

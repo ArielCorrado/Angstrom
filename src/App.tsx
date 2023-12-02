@@ -12,6 +12,7 @@ import Contact from './pages/contact/Contact';
 import Footer from './components/footer/Footer';
 import WsFloating from './components/wsFloating/WsFloating';
 import About from './pages/about/About';
+import Portfolio from './pages/portfolio/Portfolio';
 
 function App() {
     const { spinner } = useContext <SpinnerContextType> (SpinnerContext);
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/team" element={<Team/>}/>     
                 <Route path="/contact" element={<Contact/>}/>     
                 <Route path="/about" element={<About/>}/>  
+                <Route path="/portfolio" element={<Portfolio/>}/>  
                 <Route path="*" element={<Navigate to="/home"/>}/>            
             </Routes>
             <WsFloating/>
