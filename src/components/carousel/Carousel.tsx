@@ -147,7 +147,6 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
     useEffect(() => {
         if (typeof imgPos === "number") {
             imgPosRef.current = imgPos;
-            clearAnimations();
         }
         //eslint-disable-next-line
     }, [imgPos]);
