@@ -94,33 +94,31 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
     }
  
     const nextImage = async (opc: boolean) => {
-        if (enter) {
+        if (enter) {                            //Evitamos que al pasar la imagen muchas veces antes que termine la animacion actual entre en este if
             setEnter(false);
             await waitAnimationsAsync ();
             setEnter(true);
             const centerImg = document.querySelector(".carouselCenterImg") as HTMLImageElement;
             const leftImg = document.querySelector(".carouselLeftImg") as HTMLImageElement;
             const rightImg = document.querySelector(".carouselRightImg") as HTMLImageElement;
+            centerImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
             if (opc) {
-                centerImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOpOn");
-                rightImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOpOn");
-                centerImg.classList.add("carouselOpOff", "moveCenterToLeft", "transitionOpOn");
-                rightImg.classList.add("carouselOpOn", "moveRightToCenter", "transitionOpOn");
-                waitAnimations(opc);
+                rightImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
+                centerImg.classList.add("carouselOpOff", "moveCenterToLeft", "transitionOp");
+                rightImg.classList.add("carouselOpOn", "moveRightToCenter", "transitionOp");
             } else {
-                centerImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOpOn");
-                leftImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOpOn");
-                centerImg.classList.add("carouselOpOff", "moveCenterToRight", "transitionOpOn");
-                leftImg.classList.add("carouselOpOn", "moveLeftToCenter", "transitionOpOn");
-                waitAnimations(opc);
+                leftImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
+                centerImg.classList.add("carouselOpOff", "moveCenterToRight", "transitionOp");
+                leftImg.classList.add("carouselOpOn", "moveLeftToCenter", "transitionOp");
             }
+            waitAnimations(opc);
         }
     }    
 
     const clearAnimations = () => {
-        const imgs = document.querySelectorAll(".carouselImg") 
+        const imgs = document.querySelectorAll(".carouselImg");
         imgs.forEach((img) => {
-            img.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOpOn");
+            img.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
         });
     }
     
