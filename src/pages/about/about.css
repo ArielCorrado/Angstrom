@@ -25,3 +25,10 @@
 .aboutTextDiv {
     align-items: flex-start;
 }
+
+@media only screen and (orientation: portrait) {
+
+    .bullet  {
+        font-size: var(--font-size-letras-chicas-portrait);
+    }
+}

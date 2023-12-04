@@ -228,3 +228,19 @@
         transform: translateX(0);
     }
 }
+
+@media only screen and (orientation: portrait) {
+
+    .fadeInDer {
+        animation-duration: 0.75s;
+    }
+    
+    @keyframes fadeInDer {
+        0% {
+            transform: translateX(60%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
