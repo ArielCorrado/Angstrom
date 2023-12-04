@@ -36,6 +36,24 @@
     border: 1px solid rgb(54, 54, 54);
 }
 
+.carouselLeftImg {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.carouselRightImg {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.carouselOpOn {
+    opacity: 1;
+}
+
+.carouselOpOff {
+    opacity: 0;
+}
+
 .transitionOpOn {
     transition-duration: 1s;
     transition-property: opacity;
@@ -104,24 +122,6 @@
     100% {
         transform: translateX(0);
     }
-}
-
-.carouselLeftImg {
-    transform: translateX(-100%);
-    opacity: 0;
-}
-
-.carouselRightImg {
-    transform: translateX(100%);
-    opacity: 0;
-}
-
-.carouselOpOn {
-    opacity: 1;
-}
-
-.carouselOpOff {
-    opacity: 0;
 }
 
 .carouselNextIcon, .carouselPrevIcon {
