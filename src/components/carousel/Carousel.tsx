@@ -41,10 +41,9 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         return pos;
     }
 
-    const resetImages = (opc: boolean) => {
-
+    const resetImages = (opc: boolean) => {                 
         const imgs : NodeListOf<HTMLImageElement> = document.querySelectorAll(".carouselImg");
-        imgs.forEach((img) => {
+        imgs.forEach((img) => {                             //Evita que por un instante cambie la imagen del centro al hacer "clearAnimations();"
             opc ? img.src = props.imgsRoutes[imgPosAdjust(imgPosRef.current + 1)] : img.src = props.imgsRoutes[imgPosAdjust(imgPosRef.current - 1)];
         })
         clearAnimations();
@@ -68,7 +67,7 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         });
     }
 
-    const waitAnimationsAsync = () => {          //Esperamos a que la animacion actual se termine para poder pasar las imagenes nuevamente
+    const waitAnimationsAsync = () => {                    //Esperamos a que la animacion actual se termine para poder pasar las imagenes nuevamente
         return new Promise((resolve) => {
             const animations = document.querySelector(".carouselCont")?.getAnimations({subtree: true});
             const animationsCount = animations?.length;
@@ -104,10 +103,10 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
     }
  
     const nextImage = async (opc: boolean) => {
-        if (enter) {                            //Evitamos que al pasar la imagen muchas veces antes que termine la animacion actual entre en este if
+        if (enter) {                                        //Evitamos que al pasar la imagen muchas veces antes que termine la animacion actual entre en este if
+            console.log("enter")
             setEnter(false);
             await waitAnimationsAsync ();
-            setEnter(true);
             const centerImg = document.querySelector(".carouselCenterImg") as HTMLImageElement;
             const leftImg = document.querySelector(".carouselLeftImg") as HTMLImageElement;
             const rightImg = document.querySelector(".carouselRightImg") as HTMLImageElement;
@@ -120,8 +119,9 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
                 leftImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
                 centerImg.classList.add("carouselOpOff", "moveCenterToRight", "transitionOp");
                 leftImg.classList.add("carouselOpOn", "moveLeftToCenter", "transitionOp");
-            }
+            } 
             waitAnimations(opc);
+            setEnter(true);
         }
     }    
 
