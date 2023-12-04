@@ -41,6 +41,16 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         return pos;
     }
 
+    const resetImages = (opc: boolean) => {
+
+        const imgs : NodeListOf<HTMLImageElement> = document.querySelectorAll(".carouselImg");
+        imgs.forEach((img) => {
+            opc ? img.src = props.imgsRoutes[imgPosAdjust(imgPosRef.current + 1)] : img.src = props.imgsRoutes[imgPosAdjust(imgPosRef.current - 1)];
+        })
+        clearAnimations();
+        setPos(opc)
+    }
+
     const waitAnimations = (opc:boolean) => {               //Una vez que se terminan de mover las imagenes actualizamos su atributo "src" --> src={props.imgsRoutes[imgPos]}
         const animations = document.querySelector(".carouselCont")?.getAnimations({subtree: true});
         const animationsCount = animations?.length;
@@ -48,11 +58,11 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         animations?.forEach((animation) => {
             if(animation.playState === "finished") {
                 count ++
-                if (count >= animationsCount!) setPos(opc);
+                if (count >= animationsCount!) resetImages(opc);
             } else if (animation.playState === "running") {
                 animation.addEventListener("finish", () => {
                     count ++;
-                    if (count >= animationsCount!) setPos(opc);
+                    if (count >= animationsCount!) resetImages(opc);
                 });
             }
         });
