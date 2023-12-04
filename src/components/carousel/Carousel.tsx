@@ -4,9 +4,9 @@ import "./carousel.css";
 const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: string, closeFunction: () => void}) => {
     
     const [imgPos, setimgPos] = useState <number> (parseInt(props.imgSelectPos));
-    const imgPosRef = useRef(imgPos);
-              
-    useEffect(() => {       //Seteamos eventos touch
+    const imgPosRef = useRef(imgPos);       //Usamos ref sino el carousel falla al cambiar imagenes con el touch. En el codigo sin ref los eventos touch llaman a la funcion
+                                            // "nextImage" con un valor de "imgPos" que no es el actual 
+    useEffect(() => {                       //Seteamos eventos touch
         let startX: number;
         let startY: number;
         let endX: number;
