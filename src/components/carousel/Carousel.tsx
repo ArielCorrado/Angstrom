@@ -103,22 +103,16 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         }
     }
 
-    const disableButtons = () => {
-        const buttons = document.querySelectorAll(".controlIcon");
-        buttons.forEach((button) => {
-            button.classList.add("carouselButtonDisable");
-        });
+    const disableScreen = () => {
+        document.body.classList.add("disableScreen")
     }
 
-    const enableButtons = () => {
-        const buttons = document.querySelectorAll(".controlIcon");
-        buttons.forEach((button) => {
-            button.classList.remove("carouselButtonDisable");
-        });
+    const enableSacreen = () => {
+        document.body.classList.remove("disableScreen")
     }
  
     const nextImage = async (opc: boolean) => {
-        disableButtons();
+        disableScreen();
         await waitAnimationsAsync();
         const centerImg = document.querySelector(".carouselCenterImg") as HTMLImageElement;
         const leftImg = document.querySelector(".carouselLeftImg") as HTMLImageElement;
@@ -134,7 +128,7 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
             leftImg.classList.add("carouselOpOn", "moveLeftToCenter", "transitionOp");
         } 
         await waitAnimationsAsync2(opc);
-        enableButtons();
+        enableSacreen();
     }
         
     const clearAnimations = () => {
@@ -145,9 +139,7 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
     }
     
     useEffect(() => {
-        if (typeof imgPos === "number") {
-            imgPosRef.current = imgPos;
-        }
+        if (typeof imgPos === "number") imgPosRef.current = imgPos;                    
         //eslint-disable-next-line
     }, [imgPos]);
              

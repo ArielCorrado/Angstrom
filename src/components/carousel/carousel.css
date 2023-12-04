@@ -150,7 +150,7 @@
     top: 1rem !important;
 }
 
-.carouselButtonDisable {
+.disableScreen {
     pointer-events: none;
 }
 
