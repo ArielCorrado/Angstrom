@@ -29,6 +29,6 @@
 @media only screen and (orientation: portrait) {
 
     .bullet  {
-        font-size: var(--font-size-letras-chicas-portrait);
+        transform: scale(50%);
     }
 }
