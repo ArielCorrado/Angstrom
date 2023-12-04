@@ -4,9 +4,8 @@ import "./carousel.css";
 const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: string, closeFunction: () => void}) => {
     
     const [imgPos, setimgPos] = useState <number> (parseInt(props.imgSelectPos));
-    const [enter, setEnter] = useState <boolean> (true);
     const imgPosRef = useRef(imgPos);
-       
+              
     useEffect(() => {       //Seteamos eventos touch
         let startX: number;
         let startY: number;
@@ -35,7 +34,7 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         // eslint-disable-next-line
     }, []);
 
-    const imgPosAdjust = (pos: number) => {
+    const imgPosAdjust = (pos: number) => {                  //Corrije la posicion en el array de rutas de imagenes por si salimos se los limites
         if (pos >= props.imgsRoutes.length) return 0;
         if (pos < 0) return props.imgsRoutes.length - 1;
         return pos;
@@ -50,24 +49,26 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
         setPos(opc)
     }
 
-    const waitAnimations = (opc:boolean) => {               //Una vez que se terminan de mover las imagenes actualizamos su atributo "src" --> src={props.imgsRoutes[imgPos]}
-        const animations = document.querySelector(".carouselCont")?.getAnimations({subtree: true});
-        const animationsCount = animations?.length;
-        let count = 0;
-        animations?.forEach((animation) => {
-            if(animation.playState === "finished") {
-                count ++
-                if (count >= animationsCount!) resetImages(opc);
-            } else if (animation.playState === "running") {
-                animation.addEventListener("finish", () => {
-                    count ++;
-                    if (count >= animationsCount!) resetImages(opc);
-                });
-            }
-        });
+    const waitAnimationsAsync2 = (opc:boolean) => {         //Esperamos a que la animacion actual se termine para poder pasar las imagenes nuevamente
+        return new Promise((resolve) => {
+            const animations = document.querySelector(".carouselCont")?.getAnimations({subtree: true});
+            const animationsCount = animations?.length;
+            let count = 0;
+            animations?.forEach((animation) => {
+                if(animation.playState === "finished") {
+                    count ++
+                    if (count >= animationsCount!) resolve(resetImages(opc));
+                } else if (animation.playState === "running") {
+                    animation.addEventListener("finish", () => {
+                        count ++;
+                        if (count >= animationsCount!) resolve(resetImages(opc));
+                    });
+                }
+            });
+        })
     }
 
-    const waitAnimationsAsync = () => {                    //Esperamos a que la animacion actual se termine para poder pasar las imagenes nuevamente
+    const waitAnimationsAsync = () => {                    //Esperamos a que la animacion anterior se termine para poder pasar las imagenes nuevamente
         return new Promise((resolve) => {
             const animations = document.querySelector(".carouselCont")?.getAnimations({subtree: true});
             const animationsCount = animations?.length;
@@ -101,30 +102,41 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
             }
         }
     }
+
+    const disableButtons = () => {
+        const buttons = document.querySelectorAll(".controlIcon");
+        buttons.forEach((button) => {
+            button.classList.add("carouselButtonDisable");
+        });
+    }
+
+    const enableButtons = () => {
+        const buttons = document.querySelectorAll(".controlIcon");
+        buttons.forEach((button) => {
+            button.classList.remove("carouselButtonDisable");
+        });
+    }
  
     const nextImage = async (opc: boolean) => {
-        if (enter) {                                        //Evitamos que al pasar la imagen muchas veces antes que termine la animacion actual entre en este if
-            console.log("enter")
-            setEnter(false);
-            await waitAnimationsAsync ();
-            const centerImg = document.querySelector(".carouselCenterImg") as HTMLImageElement;
-            const leftImg = document.querySelector(".carouselLeftImg") as HTMLImageElement;
-            const rightImg = document.querySelector(".carouselRightImg") as HTMLImageElement;
-            centerImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
-            if (opc) {
-                rightImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
-                centerImg.classList.add("carouselOpOff", "moveCenterToLeft", "transitionOp");
-                rightImg.classList.add("carouselOpOn", "moveRightToCenter", "transitionOp");
-            } else {
-                leftImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
-                centerImg.classList.add("carouselOpOff", "moveCenterToRight", "transitionOp");
-                leftImg.classList.add("carouselOpOn", "moveLeftToCenter", "transitionOp");
-            } 
-            waitAnimations(opc);
-            setEnter(true);
-        }
-    }    
-
+        disableButtons();
+        await waitAnimationsAsync();
+        const centerImg = document.querySelector(".carouselCenterImg") as HTMLImageElement;
+        const leftImg = document.querySelector(".carouselLeftImg") as HTMLImageElement;
+        const rightImg = document.querySelector(".carouselRightImg") as HTMLImageElement;
+        centerImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
+        if (opc) {
+            rightImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
+            centerImg.classList.add("carouselOpOff", "moveCenterToLeft", "transitionOp");
+            rightImg.classList.add("carouselOpOn", "moveRightToCenter", "transitionOp");
+        } else {
+            leftImg.classList.remove("carouselOpOn", "carouselOpOff", "moveLeftToCenter", "moveRightToCenter", "moveCenterToRight", "moveCenterToLeft", "transitionOp");
+            centerImg.classList.add("carouselOpOff", "moveCenterToRight", "transitionOp");
+            leftImg.classList.add("carouselOpOn", "moveLeftToCenter", "transitionOp");
+        } 
+        await waitAnimationsAsync2(opc);
+        enableButtons();
+    }
+        
     const clearAnimations = () => {
         const imgs = document.querySelectorAll(".carouselImg");
         imgs.forEach((img) => {
@@ -143,8 +155,8 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
     return (
         <div className='carouselCont flex'>
             <img src="/images/icons/close.png" className='cvCloseIcon carouselCloseIcon' alt="Exit Icon" onClick={() => {props.closeFunction(); document.body.style.overflow = "initial"}}/>
-            <img src="/images/icons/next.png" className='carouselNextIcon' alt="Next Icon" onClick={() => nextImage(true)}/>
-            <img src="/images/icons/next.png" className='carouselPrevIcon' alt="Prev Icon" onClick={() => nextImage(false)}/>
+            <img src="/images/icons/next.png" className='controlIcon carouselNextIcon' alt="Next Icon" onClick={() => nextImage(true)}/>
+            <img src="/images/icons/next.png" className='controlIcon carouselPrevIcon' alt="Prev Icon" onClick={() => nextImage(false)}/>
             <img src={props.imgsRoutes[imgPosAdjust(imgPos - 1)]} className={`carouselImg carouselLeftImg ${props.imgClass}`} alt="Carousel Img" />
             <img src={props.imgsRoutes[imgPos]} className={`carouselImg carouselCenterImg ${props.imgClass}`} alt="Carousel Img" />
             <img src={props.imgsRoutes[imgPosAdjust(imgPos + 1)]} className={`carouselImg carouselRightImg ${props.imgClass}`} alt="Carousel Img" />

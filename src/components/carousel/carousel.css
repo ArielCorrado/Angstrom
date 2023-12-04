@@ -150,6 +150,10 @@
     top: 1rem !important;
 }
 
+.carouselButtonDisable {
+    pointer-events: none;
+}
+
 @media only screen and (orientation: portrait) {
     .carouselNextIcon, .carouselPrevIcon {
         bottom: 1rem;
