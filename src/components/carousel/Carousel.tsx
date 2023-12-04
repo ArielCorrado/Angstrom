@@ -4,6 +4,7 @@ import "./carousel.css";
 const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: string, closeFunction: () => void}) => {
     
     const [imgPos, setimgPos] = useState <number> (parseInt(props.imgSelectPos));
+    const [enter, setEnter] = useState <boolean> (true);
     const imgPosRef = useRef(imgPos);
        
     useEffect(() => {       //Seteamos eventos touch
@@ -65,11 +66,11 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
             animations?.forEach((animation) => {
                 if(animation.playState === "finished") {
                     count ++
-                    count >= animationsCount! ? resolve(true) : resolve (false);
+                    if (count >= animationsCount!) resolve(true);
                 } else if (animation.playState === "running") {
                     animation.addEventListener("finish", () => {
                         count ++;
-                        count >= animationsCount! ? resolve(true) : resolve (false);
+                        if (count >= animationsCount!) resolve(true);
                     });
                 }
             });
@@ -93,8 +94,10 @@ const Carousel = (props: {imgsRoutes: string[], imgSelectPos: string, imgClass: 
     }
  
     const nextImage = async (opc: boolean) => {
-        const response = await waitAnimationsAsync ();
-        if (response) {
+        if (enter) {
+            setEnter(false);
+            await waitAnimationsAsync ();
+            setEnter(true);
             const centerImg = document.querySelector(".carouselCenterImg") as HTMLImageElement;
             const leftImg = document.querySelector(".carouselLeftImg") as HTMLImageElement;
             const rightImg = document.querySelector(".carouselRightImg") as HTMLImageElement;
