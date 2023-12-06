@@ -1,7 +1,7 @@
 import "./cardImg1.css"
 import {ReactNode, useState, useRef} from "react"
 
-function HomeCardImg1 (props: {imgSrc: string, text: string, cardClass: string}) {
+function HomeCardImg1 (props: {imgThumbnailSrc: string, text: string, cardClass: string}) {
 
     const [cardText, setCardText] = useState <ReactNode | null> (null);
     const filterRef = useRef <HTMLImageElement | null> (null);
@@ -22,7 +22,7 @@ function HomeCardImg1 (props: {imgSrc: string, text: string, cardClass: string})
 
     return (
         <div className={`homeCardImg1Cont flex ${props.cardClass}`} onMouseOver={showText} onMouseLeave={clearText}>
-            <img src={props.imgSrc} alt="Angstrom" className="homeCardImg1Img OoS"/>
+            <img src={props.imgThumbnailSrc} alt="Angstrom" className="homeCardImg1Img OoS"/>
             <div className="cardTeamFilter" ref={filterRef}></div>
             {cardText}
         </div>

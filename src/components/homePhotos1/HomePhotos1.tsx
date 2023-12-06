@@ -20,9 +20,15 @@ function HomePhotos1() {
             cardsImgs.forEach((card) => {
                 imgsRoutes.push(card.src);
             });
+            const imgRoutesWithOutMin = imgsRoutes.map((route) => {     //Eliminamos la terminacion en "min" de los thumbnails para abrir las imagenes grandes en el carousel
+                const dotIndex = route.lastIndexOf(".");
+                const extension = route.slice(dotIndex);
+                const routeWithOutMin = route.slice(0, dotIndex - 3);   
+                return routeWithOutMin + extension;           
+            })
             const imgSelect = e.target as HTMLDivElement;
             const imgSelectPos = imgSelect.getAttribute("pos");
-            setCarousel(<Carousel imgsRoutes={imgsRoutes} imgSelectPos={imgSelectPos!} imgClass="g1ImgsAdjust" closeFunction={() => {setCarousel(null); seccionZindexMax(false)}}/>);
+            setCarousel(<Carousel imgsRoutes={imgRoutesWithOutMin} imgSelectPos={imgSelectPos!} imgClass="g1ImgsAdjust" closeFunction={() => {setCarousel(null); seccionZindexMax(false)}}/>);
             document.body.style.overflow = "hidden";
         }
         
@@ -45,14 +51,14 @@ function HomePhotos1() {
         <>
             {carousel}
             <div className="homePhotos1Cont flex wrap">
-                <CardImg1 imgSrc="/images/design/1.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/2.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/3.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/4.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/5.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/6.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/7.jpeg" cardClass="" text="Ampliar Imagen" />
-                <CardImg1 imgSrc="/images/design/8.jpeg" cardClass="" text="Ampliar Imagen" />
+                <CardImg1 imgThumbnailSrc="/images/design/1min.jpeg" cardClass="" text="Ampliar Imagen" /> {/* Nombres de thumbnail terminados en "min" */}
+                <CardImg1 imgThumbnailSrc="/images/design/2min.jpeg" cardClass="" text="Ampliar Imagen" />
+                <CardImg1 imgThumbnailSrc="/images/design/3min.jpeg" cardClass="" text="Ampliar Imagen" />
+                <CardImg1 imgThumbnailSrc="/images/design/4min.jpeg" cardClass="" text="Ampliar Imagen" />
+                <CardImg1 imgThumbnailSrc="/images/design/5min.jpeg" cardClass="" text="Ampliar Imagen" />
+                <CardImg1 imgThumbnailSrc="/images/design/6min.jpeg" cardClass="" text="Ampliar Imagen" />
+                <CardImg1 imgThumbnailSrc="/images/design/7min.jpeg" cardClass="" text="Ampliar Imagen" />
+                <CardImg1 imgThumbnailSrc="/images/design/8min.jpeg" cardClass="" text="Ampliar Imagen" />
             </div>
         </>
     )
