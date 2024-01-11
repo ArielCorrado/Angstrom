@@ -1,1 +1,1 @@
-  
+Sitio web realizado con React.js y TypeScript para la consultora técnica de la construcción Angstrom
