@@ -52,7 +52,7 @@ function Team () {
                 <>
                     <h1 className="titles">Nuestro Equipo</h1>
                     <div className="teamSeccionCardsCont flex wrap">
-                        <CardTeam imgSrc="/images/team/diego2.jpg" name="Diego Corrado" position="M.M.O - Dibujante Técnico" imgClass="" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/diego2.jpg", "Diego Corrado", "M.M.O - Dibujante Técnico")}/>
+                        <CardTeam imgSrc="/images/team/diego.jpeg" name="Diego Corrado" position="M.M.O - Dibujante Técnico" imgClass="" showCvFunction={() => showCvFunction(cvDiegoText, "/images/team/diego.jpeg", "Diego Corrado", "M.M.O - Dibujante Técnico")}/>
                         <CardTeam imgSrc="/images/team/julia.jpg" name="Julia Dowbley" position="Diseñadora Industrial" imgClass="cardJuliaImg" showCvFunction={() => showCvFunction(cvJuliaText, "/images/team/julia.jpg", "Julia Dowbley", "Diseñadora Industrial")}/>
                     </div>
                 </>

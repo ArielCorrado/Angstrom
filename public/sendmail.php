@@ -2,7 +2,7 @@
     $jsonData = file_get_contents('php://input');
     $data = json_decode($jsonData, true);
 
-    $to = 'info@angstrom.com.ar';
+    $to = 'info@angstrom.com.ar, corradodiego@hotmail.com';
     $from = 'info@angstrom.com.ar';
         
     $nombre = utf8_decode($data['nombre']);
