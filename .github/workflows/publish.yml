@@ -21,8 +21,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: "82.180.153.45"
-        username: "u631566573.angstrom.com.ar"
+        server: ${{ secrets.FTP_IP }}
+        username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: "./build/" # Asegúrate de que este directorio coincida con el directorio de construcción de tu proyecto React
         server-dir: "/public_html/" # El directorio en tu servidor de Hostinger donde deseas desplegar los archivos
