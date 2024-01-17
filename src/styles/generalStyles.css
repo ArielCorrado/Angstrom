@@ -15,8 +15,34 @@
     text-transform: uppercase;
 }
 
-/************ Sweetalert2 ************/
+/************************************* Sweet Alert ***********************************/
 
-.swal2-icon-content {
+.sweetTitleWithOptions {
+    font-size: 1.5rem;
+}
+
+.swal2-container {
+    z-index: 9500 !important;               /* Para que el spinner no tape el popup */    
+}
+
+.swal2-icon-content {                       /* Para que el texto dentro del icono redondo sea del mismo color que el circulo del icono */
     color: var(--buttons-bg); 
+    font-size: 2rem !important;
+}
+
+.swal2-shown {                              /* Para que no desaparezca el scroll cuando aparace el popup de sweetalert2"*/
+    overflow: auto;
+}
+
+.swal2-title {
+    font-size: 1.25rem;                     /* Titulo */
+}
+
+.swal2-html-container {                     /* Subtitulo */
+    font-size: 1rem !important;
+}
+
+.swal2-popup {                              /* Contenedor */
+    width: 25rem;
+    max-width: 100%;
 }

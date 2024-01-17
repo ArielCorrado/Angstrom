@@ -9,7 +9,7 @@ const swalPopUp = (title: string, text: string, icon: SweetAlertIcon) => {
         confirmButtonColor: '#3E5C76',
         iconColor: '#3E5C76',
         color: '#384153',
-        scrollbarPadding: true,
+        scrollbarPadding: false,
         customClass: {
             confirmButton: 'sweetConfirmBoton',
         },
