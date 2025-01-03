@@ -7,7 +7,7 @@ import "./pages/team/team.css";
 import { SpinnerContext } from './context/spinnerContext';
 import { SpinnerContextType } from './types/types';
 import { useContext } from 'react';
-// import Team from './pages/team/Team';
+import Team from './pages/team/Team';
 import "./components/cv/cv.css";
 import { Navigate } from 'react-router-dom';
 import Contact from './pages/contact/Contact';
@@ -25,7 +25,7 @@ function App() {
             <NavBar/>
             <Routes>
                 <Route path="/home" element={<Home/>}/> 
-                {/* <Route path="/team" element={<Team/>}/>      */}
+                <Route path="/team" element={<Team/>}/>     
                 <Route path="/contact" element={<Contact/>}/>     
                 <Route path="/about" element={<About/>}/>  
                 <Route path="/portfolio" element={<Portfolio/>}/>  
