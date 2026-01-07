@@ -24,5 +24,5 @@ jobs:
           server: ${{ secrets.FTP_IP }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "./build/" # Asegúrate de que este directorio coincida con el directorio de construcción de tu proyecto React
-          server-dir: "/" # El directorio en tu servidor de Hostinger donde deseas desplegar los archivos
+          local-dir: "./build/public_html/"
+          server-dir: "/public_html/"
